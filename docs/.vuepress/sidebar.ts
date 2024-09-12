@@ -89,6 +89,14 @@ export default sidebar({
       collapsible: true,
       children: "structure",
     },
+    {
+      text: "AI绘画",
+      icon: "fa-solid fa-feather-pointed",
+      prefix: "/sd/",
+      link: "/sd",
+      collapsible: true,
+      children: "structure",
+    },
   ],
   // 专题区（独立侧边栏）
   "/apps/topic/": "structure",
