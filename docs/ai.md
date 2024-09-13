@@ -1,7 +1,7 @@
 ---
 #博客首页设置：https://theme-hope.vuejs.press/zh/guide/blog/home.html
 home: true
-layout: AiHome
+layout: BlogHome
 icon: fa-solid fa-house-crack
 title: AI
 #heroImage: /logo.svg
