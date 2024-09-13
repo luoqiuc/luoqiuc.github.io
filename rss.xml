@@ -6,12 +6,13 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 13 Sep 2024 07:57:57 GMT</pubDate>
-    <lastBuildDate>Fri, 13 Sep 2024 07:57:57 GMT</lastBuildDate>
+    <pubDate>Fri, 13 Sep 2024 12:37:05 GMT</pubDate>
+    <lastBuildDate>Fri, 13 Sep 2024 12:37:05 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
     <category>使用指南</category>
+    <category>网站评论系统</category>
     <item>
       <title>博客文章样例2</title>
       <link>https://newzone.top/posts/2024-03-02-blog_example2.html</link>
@@ -36,10 +37,10 @@
     </item>
     <item>
       <title>如何在markdown中显示删除线</title>
-      <link>https://newzone.top/posts/2024-09-13.html</link>
-      <guid>https://newzone.top/posts/2024-09-13.html</guid>
+      <link>https://newzone.top/posts/2024-09-13-blog_markdown01.html</link>
+      <guid>https://newzone.top/posts/2024-09-13-blog_markdown01.html</guid>
       <source url="https://newzone.top/rss.xml">如何在markdown中显示删除线</source>
-      <description>在需要显示删除线的内容两边分别添加两个波浪号 显示效果</description>
+      <description>在需要显示删除线的内容两边分别添加两个波浪号 显示效果 中秋节快乐！~~</description>
       <pubDate>Tue, 23 Jul 2024 06:55:29 GMT</pubDate>
       <content:encoded><![CDATA[<p>在需要显示删除线的内容两边分别添加两个波浪号</p>
 <div class="language-txt line-numbers-mode" data-highlighter="shiki" data-ext="txt" data-title="txt" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>~~这里是需要显示删除线的内容~~</span></span></code></pre>
@@ -47,6 +48,31 @@
 <blockquote>
 <p><s>这里是需要显示删除线的内容</s></p>
 </blockquote>
+<p>中秋节快乐！~~</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>私有部署twikoo</title>
+      <link>https://newzone.top/posts/2024-09-13-blog_tkserver.html</link>
+      <guid>https://newzone.top/posts/2024-09-13-blog_tkserver.html</guid>
+      <source url="https://newzone.top/rss.xml">私有部署twikoo</source>
+      <description>私有部署 注意 私有部署的环境需配合 1.6.0 或以上版本的 twikoo.js 使用 私有部署对服务器系统没有要求，Windows、Ubuntu、CentOS、macOS 等常用系统均支持。 私有部署涉及终端操作、申请证书、配置反向代理或负载均衡等高级操作，如果对这些不太了解，建议优先选择其他方式部署。 服务端下载安装 Node.js 安装 Twi...</description>
+      <category>网站评论系统</category>
+      <pubDate>Fri, 13 Sep 2024 12:35:52 GMT</pubDate>
+      <content:encoded><![CDATA[
+<blockquote>
+<p>注意
+私有部署的环境需配合 1.6.0 或以上版本的 twikoo.js 使用
+私有部署对服务器系统没有要求，Windows、Ubuntu、CentOS、macOS 等常用系统均支持。
+私有部署涉及终端操作、申请证书、配置反向代理或负载均衡等高级操作，如果对这些不太了解，建议优先选择其他方式部署。</p>
+</blockquote>
+<ol>
+<li>服务端下载安装 <a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener noreferrer">Node.js</a></li>
+<li>安装 Twikoo server: <code>npm i -g tkserver</code></li>
+<li>根据需要配置环境变量，所有的环境变量都是可选的</li>
+</ol>
+<p>|名称	|描述	|默认值|
+|</p>
 ]]></content:encoded>
     </item>
   </channel>
