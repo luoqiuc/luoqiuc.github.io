@@ -4,7 +4,7 @@
   <title>LearnData 开源笔记</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
   <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2024-09-13T06:25:17.543Z</updated>
+  <updated>2024-09-13T07:00:48.274Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
@@ -36,9 +36,9 @@
   </entry>
   <entry>
     <title type="text"></title>
-    <id>https://newzone.top/sd/Flux.html</id>
-    <link href="https://newzone.top/sd/Flux.html"/>
-    <updated>2024-09-12T11:09:47.000Z</updated>
+    <id>https://newzone.top/ai/Flux.html</id>
+    <link href="https://newzone.top/ai/Flux.html"/>
+    <updated>2024-09-13T06:31:08.000Z</updated>
     <summary type="html"><![CDATA[<p>查看 CUDA  版本</p>
 <div class="language-cmd line-numbers-mode" data-highlighter="shiki" data-ext="cmd" data-title="cmd" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">C:\</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">Users</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">\</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">96035</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">nvidia</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">smi</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">Sun Sep  </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">8</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 12</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">28</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">16</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 2024</span></span>
