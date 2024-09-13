@@ -2,14 +2,14 @@
 title: 如何在markdown中显示删除线
 date: 2024年9月13日15:48:22
 categroy:
-  - markdown使用
+  - markdown
 tag:
   - 使用指南
   - markdown
-# 是否指定
-sticky: true
+# 是否置顶
+sticky: false
 # 是否收藏
-star: true
+star: false
 # 侧边栏的顺序
 # 数字越小越靠前，支持非整数和负数，比如 -10 < -9.5 < 3.2, order 为 -10 的文章会最靠上。
 # 个人偏好将非干货或随想短文的 order 设置在 -0.01 到 -0.99，将干货类长文的 order 设置在 -1 到负无穷。每次新增文章都会在上一篇的基础上递减 order 值。
@@ -23,3 +23,5 @@ order: -0.01
 
 显示效果
 >~~这里是需要显示删除线的内容~~
+
+中秋节快乐！~~
