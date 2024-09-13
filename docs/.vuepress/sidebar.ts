@@ -92,8 +92,8 @@ export default sidebar({
     {
       text: "AI绘画",
       icon: "fa-solid fa-feather-pointed",
-      prefix: "/sd/",
-      link: "/sd",
+      prefix: "/ai/",
+      link: "/ai",
       collapsible: true,
       children: "structure",
     },
