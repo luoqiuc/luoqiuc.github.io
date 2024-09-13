@@ -55,4 +55,6 @@ export default navbar([
       },
     ],
   },
+  { text: "洛秋资源", icon: "fa-solid fa-bars", link: "https://www.luoqiu.site/" },
+  { text: "洛秋导航", icon: "fa-solid fa-bars", link: "https://nav.luoqiu.site/" },
 ]);
