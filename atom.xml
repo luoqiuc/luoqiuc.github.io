@@ -4,7 +4,7 @@
   <title>LearnData 开源笔记</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
   <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2024-09-26T04:28:24.168Z</updated>
+  <updated>2024-09-26T04:38:31.787Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
@@ -93,14 +93,14 @@
     <title type="text">Linux常用技巧</title>
     <id>https://newzone.top/posts/2024-09-26-blog_linuxshell.html</id>
     <link href="https://newzone.top/posts/2024-09-26-blog_linuxshell.html"/>
-    <updated>2024-09-26T04:27:02.000Z</updated>
+    <updated>2024-09-26T04:37:23.000Z</updated>
     <summary type="html"><![CDATA[
 <h2>在当前目录下查找所有文件（递归）中包含指定字符的文件</h2>
-<div class="language-shell line-numbers-mode" data-highlighter="shiki" data-ext="shell" data-title="shell" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -rn</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> ./</span></span></code></pre>
+<div class="language-shell line-numbers-mode" data-highlighter="shiki" data-ext="shell" data-title="shell" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -rn</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "strings"./</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></summary>
     <content type="html"><![CDATA[
 <h2>在当前目录下查找所有文件（递归）中包含指定字符的文件</h2>
-<div class="language-shell line-numbers-mode" data-highlighter="shiki" data-ext="shell" data-title="shell" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -rn</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> ./</span></span></code></pre>
+<div class="language-shell line-numbers-mode" data-highlighter="shiki" data-ext="shell" data-title="shell" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -rn</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "strings"./</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content>
     <category term="Linux"/>
     <published>2024-07-23T06:55:29.000Z</published>
