@@ -20,6 +20,6 @@ order: -1
 ## 在当前目录下查找所有文件（递归）中包含指定字符的文件
 
 ```shell
-grep -rn ./
+grep -rn "strings"./
 ```
 
