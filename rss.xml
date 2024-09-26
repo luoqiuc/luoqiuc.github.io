@@ -6,13 +6,14 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 13 Sep 2024 12:37:05 GMT</pubDate>
-    <lastBuildDate>Fri, 13 Sep 2024 12:37:05 GMT</lastBuildDate>
+    <pubDate>Thu, 26 Sep 2024 04:28:24 GMT</pubDate>
+    <lastBuildDate>Thu, 26 Sep 2024 04:28:24 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
     <category>使用指南</category>
     <category>网站评论系统</category>
+    <category>Linux</category>
     <item>
       <title>博客文章样例2</title>
       <link>https://newzone.top/posts/2024-03-02-blog_example2.html</link>
@@ -74,6 +75,19 @@
 <p>|名称	|描述	|默认值|
 |</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>Linux常用技巧</title>
+      <link>https://newzone.top/posts/2024-09-26-blog_linuxshell.html</link>
+      <guid>https://newzone.top/posts/2024-09-26-blog_linuxshell.html</guid>
+      <source url="https://newzone.top/rss.xml">Linux常用技巧</source>
+      <description>Linux常用技巧 在当前目录下查找所有文件（递归）中包含指定字符的文件</description>
+      <category>Linux</category>
+      <pubDate>Tue, 23 Jul 2024 06:55:29 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>在当前目录下查找所有文件（递归）中包含指定字符的文件</h2>
+<div class="language-shell line-numbers-mode" data-highlighter="shiki" data-ext="shell" data-title="shell" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -rn</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> ./</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
   </channel>
 </rss>
