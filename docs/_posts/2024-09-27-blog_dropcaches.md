@@ -8,7 +8,7 @@ category:
 tag:
   - drop_caches
 # 是否置顶
-sticky: true
+sticky: false
 # 是否收藏
 star: false
 # 侧边栏的顺序
