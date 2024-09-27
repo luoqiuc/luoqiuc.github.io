@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 27 Sep 2024 09:19:15 GMT</pubDate>
-    <lastBuildDate>Fri, 27 Sep 2024 09:19:15 GMT</lastBuildDate>
+    <pubDate>Fri, 27 Sep 2024 09:31:01 GMT</pubDate>
+    <lastBuildDate>Fri, 27 Sep 2024 09:31:01 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -15,6 +15,7 @@
     <category>网站评论系统</category>
     <category>Linux</category>
     <category>MySQL</category>
+    <category>curl</category>
     <item>
       <title>博客文章样例2</title>
       <link>https://newzone.top/posts/2024-03-02-blog_example2.html</link>
@@ -231,6 +232,27 @@
 <p>手动清理Linux系统缓存是一个强大的工具，但应该谨慎使用。在大多数情况下，让Linux内核自动管理缓存是最佳选择。如果您决定手动清理缓存，请确保理解其影响，并遵循本文outlined的最佳实践。</p>
 <p>记住，系统管理是关于平衡和理解您的特定需求。总是在做出可能影响系统性能的决定之前，先评估利弊。</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>curl使用说明</title>
+      <link>https://newzone.top/posts/2024-0927-blog_linuxcurl.html</link>
+      <guid>https://newzone.top/posts/2024-0927-blog_linuxcurl.html</guid>
+      <source url="https://newzone.top/rss.xml">curl使用说明</source>
+      <description>curl使用说明 参考地址 遇到使用场景后续在补充 配置请求的cookie 配置请求头的参数 发送post请求</description>
+      <category>curl</category>
+      <pubDate>Fri, 27 Sep 2024 09:29:55 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p><a href="https://catonmat.net/cookbooks/curl" target="_blank" rel="noopener noreferrer">参考地址</a></p>
+<blockquote>
+<p>遇到使用场景后续在补充</p>
+</blockquote>
+<h2>配置请求的cookie</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> http://localhost:9600/getuser</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> --cookie</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "USER_TOKEN=xxxxxxxxxxxxxxxxxx"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>配置请求头的参数</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> http://localhost:9600/getuser</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -H</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "X-Request-Id:12"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>发送post请求</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -X</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> POST</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> http://localhost:9600/putuser</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -H</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "X-Request-Id:12"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
   </channel>
 </rss>
