@@ -28,6 +28,8 @@ order: -1
 > 对于某些 Linux 平台，从 RPM 或 Debian 软件包安装 MySQL 包括 systemd 支持，用于管理 MySQL 服务器的启动和关闭。在这些平台上，未安装 [mysqld_safe](https://dev.mysql.com/doc/refman/8.0/en/mysqld-safe.html)。在这种情况下，请使用 systemd 启动和关闭服务器，而不是使用以下说明中的方法。请参见[第 2.5.9 节“使用 systemd 管理 MySQL 服务器”](https://dev.mysql.com/doc/refman/8.0/en/using-systemd.html)。
 > 有关 MySQL Cluster 安装的升级，另请参见 [MySQL Cluster 升级](https://dev.mysql.com/doc/refman/8.0/en/upgrade-binary-package.html#upgrading-cluster)。
 
+> 其他版本升级可参考MySQL官方文档
+
 本次8.0.31升级到8.0.37 小版本升级，直接下载rpm包升级。
 
 [MySQL旧版本下载地址](https://downloads.mysql.com/archives/community/)
@@ -101,3 +103,4 @@ mysql  Ver 8.0.37 for Linux on x86_64 (MySQL Community Server - GPL)
 # 启动MySQL
 systemctl start mysqld
 ```
+
