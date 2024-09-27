@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 26 Sep 2024 04:38:31 GMT</pubDate>
-    <lastBuildDate>Thu, 26 Sep 2024 04:38:31 GMT</lastBuildDate>
+    <pubDate>Fri, 27 Sep 2024 03:16:24 GMT</pubDate>
+    <lastBuildDate>Fri, 27 Sep 2024 03:16:24 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -88,6 +88,91 @@
 <h2>在当前目录下查找所有文件（递归）中包含指定字符的文件</h2>
 <div class="language-shell line-numbers-mode" data-highlighter="shiki" data-ext="shell" data-title="shell" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -rn</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "strings"./</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Linux清理系统缓存</title>
+      <link>https://newzone.top/posts/2024-09-27-blog_dropcaches.html</link>
+      <guid>https://newzone.top/posts/2024-09-27-blog_dropcaches.html</guid>
+      <source url="https://newzone.top/rss.xml">Linux清理系统缓存</source>
+      <description>Linux缓存管理：如何安全地清理系统缓存 在Linux系统中，内存管理是一个关键的性能因素。虽然Linux内核通常能够有效地管理内存和缓存，但有时我们可能需要手动干预。本文将详细介绍如何安全地清理Linux系统缓存，特别是在CentOS等系统中。 目录 Linux缓存管理：如何安全地清理系统缓存 目录 理解/proc/sys/vm/drop_cach...</description>
+      <category>Linux</category>
+      <pubDate>Fri, 27 Sep 2024 03:15:12 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>在Linux系统中，内存管理是一个关键的性能因素。虽然Linux内核通常能够有效地管理内存和缓存，但有时我们可能需要手动干预。本文将详细介绍如何安全地清理Linux系统缓存，特别是在CentOS等系统中。</p>
+<h2>目录</h2>
+<ul>
+<li><a href="#linux%E7%BC%93%E5%AD%98%E7%AE%A1%E7%90%86%E5%A6%82%E4%BD%95%E5%AE%89%E5%85%A8%E5%9C%B0%E6%B8%85%E7%90%86%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98">Linux缓存管理：如何安全地清理系统缓存</a>
+<ul>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#%E7%90%86%E8%A7%A3procsysvmdrop_caches">理解/proc/sys/vm/drop_caches</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%B8%85%E7%90%86%E7%BC%93%E5%AD%98">为什么要清理缓存？</a></li>
+<li><a href="#%E6%B8%85%E7%90%86%E7%BC%93%E5%AD%98%E7%9A%84%E6%AD%A5%E9%AA%A4">清理缓存的步骤</a></li>
+<li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E5%92%8C%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">注意事项和最佳实践</a></li>
+<li><a href="#%E7%BB%93%E8%AE%BA">结论</a></li>
+</ul>
+</li>
+</ul>
+<h2>理解/proc/sys/vm/drop_caches</h2>
+<p>在Linux系统中，<code>/proc/sys/vm/drop_caches</code>是一个用于手动清理系统缓存的内核接口。它可以有以下三个值：</p>
+<ul>
+<li>1: 清理页面缓存</li>
+<li>2: 清理dentries和inodes</li>
+<li>3: 清理页面缓存、dentries和inodes</li>
+</ul>
+<p>默认情况下，这个值是0，表示系统没有执行任何手动缓存清理操作。</p>
+<h2>为什么要清理缓存？</h2>
+<p>在大多数情况下，让Linux内核自动管理缓存是最佳选择。然而，在某些特殊情况下，手动清理缓存可能会有所帮助：</p>
+<ol>
+<li>进行性能测试</li>
+<li>诊断内存问题</li>
+<li>在内存紧张的系统上释放更多可用内存</li>
+</ol>
+<p>请注意，频繁或不必要地清理缓存可能会降低系统性能，因为系统需要重新从磁盘读取数据。</p>
+<h2>清理缓存的步骤</h2>
+<p>以下是安全清理Linux系统缓存的步骤：</p>
+<ol>
+<li>
+<p>切换到root用户（如果还不是root）:</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> su</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> -</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
+<li>
+<p>执行sync命令，确保所有待写入的数据都已经存储到磁盘:</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">sync</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
+<li>
+<p>清理缓存:</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 3</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> &gt;</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /proc/sys/vm/drop_caches</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
+<li>
+<p>验证更改:</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /proc/sys/vm/drop_caches</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
+</ol>
+<h2>注意事项和最佳实践</h2>
+<ol>
+<li>
+<p><strong>谨慎使用</strong>：在生产环境中要特别小心，因为清理缓存可能会暂时影响系统性能。</p>
+</li>
+<li>
+<p><strong>使用sync</strong>：总是在清理缓存前运行sync命令，以防止数据丢失。</p>
+</li>
+<li>
+<p><strong>选择性清理</strong>：根据需求，可以只清理部分缓存（使用1或2而不是3）。</p>
+</li>
+<li>
+<p><strong>自动化</strong>：如果需要定期清理缓存，考虑创建一个脚本或设置定时任务。</p>
+</li>
+<li>
+<p><strong>监控影响</strong>：在清理缓存后，密切关注系统性能，以了解这个操作的影响。</p>
+</li>
+<li>
+<p><strong>了解原因</strong>：在执行缓存清理之前，先了解为什么需要这么做。可能有其他更好的解决方案。</p>
+</li>
+</ol>
+<h2>结论</h2>
+<p>手动清理Linux系统缓存是一个强大的工具，但应该谨慎使用。在大多数情况下，让Linux内核自动管理缓存是最佳选择。如果您决定手动清理缓存，请确保理解其影响，并遵循本文outlined的最佳实践。</p>
+<p>记住，系统管理是关于平衡和理解您的特定需求。总是在做出可能影响系统性能的决定之前，先评估利弊。</p>
+]]></content:encoded>
     </item>
   </channel>
 </rss>
