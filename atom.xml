@@ -4,7 +4,7 @@
   <title>LearnData 开源笔记</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
   <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2024-09-27T09:31:01.581Z</updated>
+  <updated>2024-10-10T02:51:19.176Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
@@ -14,6 +14,7 @@
   <category term="Linux"/>
   <category term="MySQL"/>
   <category term="curl"/>
+  <category term="Redis"/>
   <entry>
     <title type="text">博客文章样例2</title>
     <id>https://newzone.top/posts/2024-03-02-blog_example2.html</id>
@@ -293,5 +294,78 @@
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content>
     <category term="curl"/>
     <published>2024-09-27T09:29:55.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">如何提高Redis服务器的最大打开文件数限制</title>
+    <id>https://newzone.top/posts/2024-10-10-blog_redis.html</id>
+    <link href="https://newzone.top/posts/2024-10-10-blog_redis.html"/>
+    <updated>2024-10-10T02:50:16.000Z</updated>
+    <summary type="html"><![CDATA[
+<p>在运行高并发Redis服务时,我们可能会遇到"max number of clients reached"的错误。这通常是因为系统对可打开文件数的限制太低导致的。本文将指导您如何提高Redis服务器的最大打开文件数(Max open files)限制。</p>
+<h2>问题诊断</h2>
+<p>首先,让我们查看当前的系统限制和Redis进程的限制:</p>
+<ol>
+<li>检查系统级别的限制:</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/security/limits.conf</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> grep</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'nofile\|nproc'</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[
+<p>在运行高并发Redis服务时,我们可能会遇到"max number of clients reached"的错误。这通常是因为系统对可打开文件数的限制太低导致的。本文将指导您如何提高Redis服务器的最大打开文件数(Max open files)限制。</p>
+<h2>问题诊断</h2>
+<p>首先,让我们查看当前的系统限制和Redis进程的限制:</p>
+<ol>
+<li>检查系统级别的限制:</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/security/limits.conf</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> grep</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'nofile\|nproc'</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>输出可能类似于:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>* soft nofile 65536</span></span>
+<span class="line"><span>* hard nofile 65536</span></span>
+<span class="line"><span>* soft nproc 65565</span></span>
+<span class="line"><span>* hard nproc 65565</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>检查Redis进程的实际限制:</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">pidof</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> redis-server</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /proc/</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">pi</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">d</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">&gt;</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">/limits</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>其中<code>&lt;pid&gt;</code>是Redis服务器的进程ID。输出可能显示:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>Max open files            10240                10240                files</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>如果这个值明显小于系统限制,那么我们需要进行一些调整。</p>
+<h2>解决步骤</h2>
+<h3>1. 修改系统级别的限制</h3>
+<p>如果系统级别的限制不够高,首先在<code>/etc/security/limits.conf</code>文件中设置更高的限制:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>* soft nofile 65536</span></span>
+<span class="line"><span>* hard nofile 65536</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>2. 为Redis进程特别设置限制</h3>
+<p>假设Redis由用户"redis"运行,在<code>/etc/security/limits.conf</code>文件中添加:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>redis soft nofile 65536</span></span>
+<span class="line"><span>redis hard nofile 65536</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>如果Redis以root用户运行,则改为:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>root soft nofile 65536</span></span>
+<span class="line"><span>root hard nofile 65536</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>3. 修改Redis配置文件</h3>
+<p>在Redis的配置文件(通常是<code>/etc/redis/redis.conf</code>或<code>/etc/redis.conf</code>)中,添加或修改:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>maxclients 65000</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h3>4. 修改systemd服务文件</h3>
+<p>如果Redis是通过systemd管理的,编辑<code>/etc/systemd/system/redis.service</code>文件(如果不存在,可能在<code>/lib/systemd/system/redis.service</code>),添加:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>[Service]</span></span>
+<span class="line"><span>LimitNOFILE=65536</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>5. 重新加载systemd并重启Redis</h3>
+<p>执行以下命令:</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> daemon-reload</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> restart</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> redis</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>6. 验证更改</h3>
+<p>重启Redis后,再次检查限制:</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">pidof</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> redis-server</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /proc/</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">pi</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">d</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">&gt;</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">/limits</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h2>注意事项</h2>
+<ul>
+<li>如果上述步骤执行后仍然没有效果,可能需要检查SELinux或其他安全机制是否在限制Redis的文件描述符使用。</li>
+<li>某些云平台或容器环境可能有额外的限制机制,需要单独配置。</li>
+<li>确保设置的限制值不会对系统整体性能造成负面影响。</li>
+</ul>
+<p>通过以上步骤,您应该能够成功提高Redis服务器的最大打开文件数限制,从而支持更多的并发连接。</p>
+]]></content>
+    <category term="Redis"/>
+    <published>2024-10-10T02:50:16.000Z</published>
   </entry>
 </feed>
