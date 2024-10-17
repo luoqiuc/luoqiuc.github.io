@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 10 Oct 2024 03:20:35 GMT</pubDate>
-    <lastBuildDate>Thu, 10 Oct 2024 03:20:35 GMT</lastBuildDate>
+    <pubDate>Thu, 17 Oct 2024 07:23:01 GMT</pubDate>
+    <lastBuildDate>Thu, 17 Oct 2024 07:23:01 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -17,6 +17,8 @@
     <category>MySQL</category>
     <category>curl</category>
     <category>Redis</category>
+    <category>CentOS</category>
+    <category>安全</category>
     <item>
       <title>博客文章样例2</title>
       <link>https://newzone.top/posts/2024-03-02-blog_example2.html</link>
@@ -318,6 +320,193 @@
 <li>确保设置的限制值不会对系统整体性能造成负面影响。</li>
 </ul>
 <p>通过以上步骤,您应该能够成功提高Redis服务器的最大打开文件数限制,从而支持更多的并发连接。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>CentOS 7系统 OpenSSH和OpenSSL版本升级指南</title>
+      <link>https://newzone.top/posts/2024-10-17-blog_openssh_l.html</link>
+      <guid>https://newzone.top/posts/2024-10-17-blog_openssh_l.html</guid>
+      <source url="https://newzone.top/rss.xml">CentOS 7系统 OpenSSH和OpenSSL版本升级指南</source>
+      <description>CentOS 7系统 OpenSSH和OpenSSL版本升级指南 在处理服务器安全问题时，及时升级关键组件的版本是非常重要的。本文将详细介绍如何在CentOS 7系统上升级OpenSSH和OpenSSL到最新稳定版本，以解决已知的安全漏洞。 环境说明 当前系统版本 当前组件版本 现存安全漏洞 当前版本存在以下安全漏洞： OpenSSH 安全漏洞(CVE...</description>
+      <category>CentOS</category>
+      <category>安全</category>
+      <pubDate>Thu, 17 Oct 2024 07:21:39 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>在处理服务器安全问题时，及时升级关键组件的版本是非常重要的。本文将详细介绍如何在CentOS 7系统上升级OpenSSH和OpenSSL到最新稳定版本，以解决已知的安全漏洞。</p>
+<h2>环境说明</h2>
+<h3>当前系统版本</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">[root@tamkems-yy </span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">~</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]# cat /etc/redhat-release </span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">CentOS</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> Linux</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> release</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 7.8.2003</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> (Core)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>当前组件版本</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">[root@tamkems-yy </span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">~</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]# ssh -V</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">OpenSSH_7.4p1,</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> OpenSSL</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 1.0.2k-fips</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">  26</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> Jan</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 2017</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">[root@tamkems-yy </span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">~</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]# openssl version</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">OpenSSL</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 1.0.2k-fips</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">  26</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> Jan</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 2017</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>现存安全漏洞</h2>
+<p>当前版本存在以下安全漏洞：</p>
+<ul>
+<li>OpenSSH 安全漏洞(CVE-2023-51767)</li>
+<li>OpenSSH 安全漏洞(CVE-2023-38408)</li>
+<li>OpenSSH 命令注入漏洞(CVE-2020-15778)</li>
+<li>OpenSSH 欺骗安全漏洞(CVE-2019-6110)</li>
+<li>OpenSSH信息泄露漏洞(CVE-2020-14145)</li>
+<li>OpenSSH 用户枚举漏洞(CVE-2018-15919)</li>
+<li>OpenSSH 安全漏洞(CVE-2023-48795)</li>
+<li>OpenSSH CBC模式信息泄露漏洞(CVE-2008-5161)</li>
+<li>等多个安全漏洞...</li>
+</ul>
+<h2>升级目标版本</h2>
+<ul>
+<li>OpenSSH: 9.6p1</li>
+<li>OpenSSL: 1.1.1w</li>
+</ul>
+<h2>升级准备工作</h2>
+<p>在开始升级之前，需要做好以下准备：</p>
+<ol>
+<li>系统备份</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 创建备份目录</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">mkdir</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /root/ssh_backup_</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">date</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> +%Y%m%d</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 备份当前配置</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">cp</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -r</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh/</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">*</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /root/ssh_backup_</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">date</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> +%Y%m%d</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">/</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">cp</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/sysconfig/sshd</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /root/ssh_backup_</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">date</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> +%Y%m%d</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">/</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>安装必要的编译工具</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 安装开发工具组</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">yum</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> groupinstall</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "Development Tools"</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 安装依赖包</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">yum</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> zlib-devel</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> openssl-devel</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> perl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> perl-devel</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> pam-devel</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>OpenSSL升级步骤</h2>
+<h3>1. 下载和解压</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /usr/local/src</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">wget</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> https://www.openssl.org/source/openssl-1.1.1w.tar.gz</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">tar</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -zxf</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> openssl-1.1.1w.tar.gz</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> openssl-1.1.1w</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>2. 编译安装</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 配置</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">./config</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> --prefix=/usr/local/openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> shared</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> zlib</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 编译和测试</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">make</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">make</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> test</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 安装</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">make</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>3. 配置环境</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 配置动态链接库</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "/usr/local/openssl/lib"</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> &gt;</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ld.so.conf.d/openssl.conf</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">ldconfig</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 替换原有的OpenSSL</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">mv</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /usr/bin/openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /usr/bin/openssl.old</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">ln</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /usr/local/openssl/bin/openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /usr/bin/openssl</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>OpenSSH升级步骤</h2>
+<h3>1. 下载和解压</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /usr/local/src</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">wget</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.6p1.tar.gz</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">tar</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -zxf</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> openssh-9.6p1.tar.gz</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> openssh-9.6p1</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>2. 编译安装</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 配置</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">./configure</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">    --prefix=/usr</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">    --sysconfdir=/etc/ssh</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">    --with-ssl-dir=/usr/local/openssl</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">    --with-zlib</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">    --with-pam</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">    --with-md5-passwords</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">    --with-tcp-wrappers</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 编译和安装</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">make</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">make</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>3. 服务配置</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 更新服务脚本</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">cp</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> contrib/redhat/sshd.init</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/init.d/sshd</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> +x</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/init.d/sshd</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chkconfig</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> --add</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> sshd</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 更新SELinux上下文</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">restorecon</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /usr/sbin/sshd</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>安全配置更新</h2>
+<h3>1. 更新SSH配置文件</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> &gt;</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh/sshd_config</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> &lt;&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF"> 'EOF'</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Protocol 2</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">PermitRootLogin prohibit-password</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">PasswordAuthentication yes</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">ChallengeResponseAuthentication no</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">UsePAM yes</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">X11Forwarding yes</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">PrintMotd no</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">AcceptEnv LANG LC_*</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Subsystem sftp /usr/libexec/openssh/sftp-server</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF">EOF</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>2. 设置正确的权限</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chown</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -R</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> root:root</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 755</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 644</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh/</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">*</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 600</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh/</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">*</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">_key</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>服务重启和验证</h2>
+<h3>1. 重启服务</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> restart</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> sshd</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> status</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> sshd</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>2. 验证版本</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">ssh</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -V</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> version</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>3. 连接测试</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">ssh</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -v</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> localhost</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>故障排查指南</h2>
+<p>如果升级后遇到问题，可以按以下步骤排查：</p>
+<ol>
+<li>检查日志文件</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">tail</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -f</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /var/log/secure</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">tail</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -f</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /var/log/messages</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>检查防火墙设置</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">firewall-cmd</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> --list-services</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> grep</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> ssh</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><ol start="3">
+<li>如需回滚，执行以下操作：
+<ul>
+<li>停止sshd服务</li>
+<li>从备份目录恢复配置文件</li>
+<li>重启服务</li>
+</ul>
+</li>
+</ol>
+<h2>安全建议</h2>
+<p>完成升级后，建议采取以下安全措施：</p>
+<ol>
+<li>
+<p>加强SSH配置</p>
+<ul>
+<li>禁用不安全的加密算法</li>
+<li>限制root用户登录</li>
+<li>设置登录失败次数限制</li>
+<li>配置密钥认证</li>
+</ul>
+</li>
+<li>
+<p>定期维护</p>
+<ul>
+<li>检查系统日志</li>
+<li>监控失败的登录尝试</li>
+<li>定期检查服务状态</li>
+</ul>
+</li>
+</ol>
+<h2>总结</h2>
+<p>通过以上步骤，我们已经成功将OpenSSH和OpenSSL升级到了最新的稳定版本，解决了多个安全漏洞。建议在执行升级操作前，先在测试环境中进行验证，确保升级过程不会影响到生产环境的正常运行。</p>
+<h2>参考文档</h2>
+<ul>
+<li>OpenSSH官方文档: https://www.openssh.com/</li>
+<li>OpenSSL官方文档: https://www.openssl.org/</li>
+<li>CentOS 7官方文档: https://wiki.centos.org/</li>
+</ul>
 ]]></content:encoded>
     </item>
   </channel>
