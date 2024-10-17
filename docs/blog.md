@@ -4,7 +4,7 @@ home: true
 layout: BlogHome
 icon: fa-solid fa-house-crack
 title: 小小运维
-#heroImage: /logo.svg
+heroImage: /logo.png
 heroText: 小小运维
 tagline: 摔倒了又怎样，至少我们还年轻
 bgImage: https://image-dog.pages.dev/file/234ca56e8adce0636cd23.jpg
