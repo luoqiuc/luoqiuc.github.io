@@ -4,7 +4,7 @@
   <title>LearnData 开源笔记</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
   <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2024-10-18T04:12:56.259Z</updated>
+  <updated>2024-10-18T08:53:09.185Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
@@ -374,7 +374,7 @@
     <title type="text">CentOS 7系统 OpenSSH和OpenSSL版本升级指南</title>
     <id>https://newzone.top/posts/2024-10-17-blog_openssh_l.html</id>
     <link href="https://newzone.top/posts/2024-10-17-blog_openssh_l.html"/>
-    <updated>2024-10-17T07:21:39.000Z</updated>
+    <updated>2024-10-18T08:51:59.000Z</updated>
     <summary type="html"><![CDATA[
 <p>在处理服务器安全问题时，及时升级关键组件的版本是非常重要的。本文将详细介绍如何在CentOS 7系统上升级OpenSSH和OpenSSL到最新稳定版本，以解决已知的安全漏洞。</p>
 <h2>环境说明</h2>
@@ -474,42 +474,84 @@
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 编译和安装</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">make</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">make</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>3. 服务配置</h3>
-<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 更新服务脚本</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">cp</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> contrib/redhat/sshd.init</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/init.d/sshd</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> +x</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/init.d/sshd</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chkconfig</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> --add</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> sshd</span></span>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>3. 创建systemd服务配置</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 创建 systemd 服务文件</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> &gt;</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /usr/lib/systemd/system/sshd.service</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> &lt;&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF"> 'EOF'</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">[Unit]</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Description=OpenSSH server daemon</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Documentation=man:sshd(8) man:sshd_config(5)</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">After=network.target</span></span>
 <span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 更新SELinux上下文</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">restorecon</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /usr/sbin/sshd</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>安全配置更新</h2>
-<h3>1. 更新SSH配置文件</h3>
-<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> &gt;</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh/sshd_config</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> &lt;&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF"> 'EOF'</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">[Service]</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Type=exec</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">ExecStart=/usr/sbin/sshd -D -e</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">ExecReload=/bin/kill -HUP $MAINPID</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">KillMode=process</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Restart=on-failure</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">RestartSec=3s</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">[Install]</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">WantedBy=multi-user.target</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF">EOF</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>4. 更新SSH配置文件</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 创建新的 sshd_config 配置文件</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> &gt;</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh/sshd_config</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> &lt;&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF"> 'EOF'</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379"># 基本配置</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Port 22</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">AddressFamily any</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">ListenAddress 0.0.0.0</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">ListenAddress ::</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379"># 协议版本</span></span>
 <span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Protocol 2</span></span>
-<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">PermitRootLogin prohibit-password</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379"># 主机密钥</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">HostKey /etc/ssh/ssh_host_rsa_key</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">HostKey /etc/ssh/ssh_host_ecdsa_key</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">HostKey /etc/ssh/ssh_host_ed25519_key</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379"># 日志级别</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">SyslogFacility AUTHPRIV</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">LogLevel INFO</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379"># 认证配置</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">PermitRootLogin yes</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">PubkeyAuthentication yes</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">AuthorizedKeysFile .ssh/authorized_keys</span></span>
 <span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">PasswordAuthentication yes</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">PermitEmptyPasswords no</span></span>
 <span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">ChallengeResponseAuthentication no</span></span>
-<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">UsePAM yes</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379"># 其他设置</span></span>
 <span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">X11Forwarding yes</span></span>
 <span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">PrintMotd no</span></span>
-<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">AcceptEnv LANG LC_*</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">UsePAM yes</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">UseDNS no</span></span>
 <span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Subsystem sftp /usr/libexec/openssh/sftp-server</span></span>
 <span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF">EOF</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>2. 设置正确的权限</h3>
-<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chown</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -R</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> root:root</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh</span></span>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>5. 设置正确的文件权限</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 设置关键文件权限</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 755</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /usr/sbin/sshd</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 755</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 644</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh/</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">*</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 600</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh/</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">*</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">_key</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>服务重启和验证</h2>
-<h3>1. 重启服务</h3>
-<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> restart</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> sshd</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 644</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh/sshd_config</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 600</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh/ssh_host_</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">*</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">_key</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 644</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/ssh/ssh_host_</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">*</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">_key.pub</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>6. 重启服务</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 重新加载 systemd 配置</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> daemon-reload</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 重启 sshd 服务</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> restart</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> sshd</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 检查服务状态</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> status</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> sshd</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>2. 验证版本</h3>
-<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">ssh</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -V</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> version</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>3. 连接测试</h3>
-<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">ssh</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -v</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> localhost</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>故障排查指南</h2>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>7. 验证升级</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 检查 SSH 版本</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">ssh</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -V</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 尝试本地连接测试</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">ssh</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -v</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> localhost</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>故障排查指南</h2>
 <p>如果升级后遇到问题，可以按以下步骤排查：</p>
 <ol>
 <li>检查日志文件</li>
