@@ -142,58 +142,97 @@ make
 make install
 ```
 
-### 3. 服务配置
-```bash
-# 更新服务脚本
-cp contrib/redhat/sshd.init /etc/init.d/sshd
-chmod +x /etc/init.d/sshd
-chkconfig --add sshd
 
-# 更新SELinux上下文
-restorecon /usr/sbin/sshd
+
+### 3. 创建systemd服务配置
+```bash
+# 创建 systemd 服务文件
+cat > /usr/lib/systemd/system/sshd.service << 'EOF'
+[Unit]
+Description=OpenSSH server daemon
+Documentation=man:sshd(8) man:sshd_config(5)
+After=network.target
+
+[Service]
+Type=exec
+ExecStart=/usr/sbin/sshd -D -e
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+RestartSec=3s
+
+[Install]
+WantedBy=multi-user.target
+EOF
 ```
 
-## 安全配置更新
-
-### 1. 更新SSH配置文件
+### 4. 更新SSH配置文件
 ```bash
+# 创建新的 sshd_config 配置文件
 cat > /etc/ssh/sshd_config << 'EOF'
+# 基本配置
+Port 22
+AddressFamily any
+ListenAddress 0.0.0.0
+ListenAddress ::
+
+# 协议版本
 Protocol 2
-PermitRootLogin prohibit-password
+
+# 主机密钥
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+
+# 日志级别
+SyslogFacility AUTHPRIV
+LogLevel INFO
+
+# 认证配置
+PermitRootLogin yes
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys
 PasswordAuthentication yes
+PermitEmptyPasswords no
 ChallengeResponseAuthentication no
-UsePAM yes
+
+# 其他设置
 X11Forwarding yes
 PrintMotd no
-AcceptEnv LANG LC_*
+UsePAM yes
+UseDNS no
 Subsystem sftp /usr/libexec/openssh/sftp-server
 EOF
 ```
 
-### 2. 设置正确的权限
+### 5. 设置正确的文件权限
 ```bash
-chown -R root:root /etc/ssh
+# 设置关键文件权限
+chmod 755 /usr/sbin/sshd
 chmod 755 /etc/ssh
-chmod 644 /etc/ssh/*
-chmod 600 /etc/ssh/*_key
+chmod 644 /etc/ssh/sshd_config
+chmod 600 /etc/ssh/ssh_host_*_key
+chmod 644 /etc/ssh/ssh_host_*_key.pub
 ```
 
-## 服务重启和验证
-
-### 1. 重启服务
+### 6. 重启服务
 ```bash
+# 重新加载 systemd 配置
+systemctl daemon-reload
+
+# 重启 sshd 服务
 systemctl restart sshd
+
+# 检查服务状态
 systemctl status sshd
 ```
 
-### 2. 验证版本
+### 7. 验证升级
 ```bash
+# 检查 SSH 版本
 ssh -V
-openssl version
-```
 
-### 3. 连接测试
-```bash
+# 尝试本地连接测试
 ssh -v localhost
 ```
 
