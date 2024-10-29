@@ -27,6 +27,11 @@ export default navbar([
             icon: "fa-solid fa-dice-d20",
             link: "apps/topic/",
           },
+          {
+            text: "镜像下载",
+            icon: "fa-solid fa-dice-d21",
+            link: "apps/iso/",
+          },
         ],
       },
     ],
