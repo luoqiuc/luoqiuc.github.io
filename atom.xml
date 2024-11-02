@@ -4,7 +4,7 @@
   <title>LearnData 开源笔记</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
   <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2024-11-02T12:21:49.554Z</updated>
+  <updated>2024-11-02T12:36:29.043Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
@@ -259,7 +259,7 @@
     <title type="text">curl使用说明</title>
     <id>https://newzone.top/posts/2024-0927-blog_linuxcurl.html</id>
     <link href="https://newzone.top/posts/2024-0927-blog_linuxcurl.html"/>
-    <updated>2024-09-27T09:29:55.000Z</updated>
+    <updated>2024-11-02T12:29:53.000Z</updated>
     <summary type="html"><![CDATA[
 <p><a href="https://catonmat.net/cookbooks/curl" target="_blank" rel="noopener noreferrer">参考地址</a></p>
 <blockquote>
@@ -279,9 +279,39 @@
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> http://localhost:9600/getuser</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -H</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "X-Request-Id:12"</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>发送post请求</h2>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -X</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> POST</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> http://localhost:9600/putuser</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -H</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "X-Request-Id:12"</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>发送带请求体的POST请求</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 发送JSON数据</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -X</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> POST</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -H</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "Content-Type: application/json"</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> '{"name":"张三","age":18}'</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> http://localhost:9600/user</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 发送表单数据</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -X</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> POST</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "name=张三&amp;age=18"</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> http://localhost:9600/user</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>下载文件</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 下载并保存为原文件名</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -O</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> https://example.com/file.zip</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 下载并指定保存的文件名</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -o</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> myfile.zip</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> https://example.com/file.zip</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>显示详细的请求��息</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># -v 参数可以显示请求的详细信息,包括请求头、响应头等</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -v</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> http://localhost:9600/getuser</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># -i 参数可以显示响应头信息</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -i</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> http://localhost:9600/getuser</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>跟随重定向</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># -L 参数可以跟随30x重定向</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -L</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> http://localhost:9600/redirect</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h2>设置超时时间</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 设置连接超时时间为5秒</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> --connect-timeout</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 5</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> http://localhost:9600/getuser</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h2>上传文件</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 上传单个文件</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -F</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "file=@/path/to/local/file.txt"</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> http://localhost:9600/upload</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 上传多个文件</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -F</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "file1=@/path/to/file1.txt"</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -F</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "file2=@/path/to/file2.txt"</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> http://localhost:9600/upload</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
     <category term="curl"/>
-    <published>2024-09-27T09:29:55.000Z</published>
+    <published>2024-09-27T17:20:49.000Z</published>
   </entry>
   <entry>
     <title type="text">如何提高Redis服务器的最大打开文件数限制</title>
