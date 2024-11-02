@@ -8,7 +8,17 @@ export default sidebar({
     "/DailyRoutine",
     "/Fitness",
     // 读书笔记架构更换到 docsify，不能使用相对链接
-    { text: "读书笔记", icon: "fa-brands fa-readme", link: "https://newzone.top/reading/" },
+    { text: "读书笔记",
+      icon: "fa-brands fa-readme",
+      prefix: "/reading/",
+      link: "",
+      children: [
+        "社会认知.md",
+        "影响力.md",
+        "自我认知.md",
+      ],
+    },
+    
     // 指定显示页面
     {
       text: "🧰 应用手册",
