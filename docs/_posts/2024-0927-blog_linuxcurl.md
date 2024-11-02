@@ -1,6 +1,6 @@
 ---
 title: curl使用说明
-date: 2024年9月27日17:20:49
+date: 2024-09-27 17:20:49
 # 一个页面可以有多个分类
 category:
   - curl
@@ -53,7 +53,7 @@ curl -O https://example.com/file.zip
 curl -o myfile.zip https://example.com/file.zip
 ```
 
-## 显示详细的请求信息
+## 显示详细的请求��息
 ```bash
 # -v 参数可以显示请求的详细信息,包括请求头、响应头等
 curl -v http://localhost:9600/getuser
