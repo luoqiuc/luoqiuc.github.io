@@ -34,3 +34,51 @@ curl http://localhost:9600/getuser -H "X-Request-Id:12"
 ```bash
 curl -X POST http://localhost:9600/putuser -H "X-Request-Id:12"
 ```
+
+## 发送带请求体的POST请求
+```bash
+# 发送JSON数据
+curl -X POST -H "Content-Type: application/json" -d '{"name":"张三","age":18}' http://localhost:9600/user
+
+# 发送表单数据
+curl -X POST -d "name=张三&age=18" http://localhost:9600/user
+```
+
+## 下载文件
+```bash 
+# 下载并保存为原文件名
+curl -O https://example.com/file.zip
+
+# 下载并指定保存的文件名
+curl -o myfile.zip https://example.com/file.zip
+```
+
+## 显示详细的请求信息
+```bash
+# -v 参数可以显示请求的详细信息,包括请求头、响应头等
+curl -v http://localhost:9600/getuser
+
+# -i 参数可以显示响应头信息
+curl -i http://localhost:9600/getuser
+```
+
+## 跟随重定向
+```bash
+# -L 参数可以跟随30x重定向
+curl -L http://localhost:9600/redirect
+```
+
+## 设置超时时间
+```bash
+# 设置连接超时时间为5秒
+curl --connect-timeout 5 http://localhost:9600/getuser
+```
+
+## 上传文件
+```bash
+# 上传单个文件
+curl -F "file=@/path/to/local/file.txt" http://localhost:9600/upload
+
+# 上传多个文件
+curl -F "file1=@/path/to/file1.txt" -F "file2=@/path/to/file2.txt" http://localhost:9600/upload
+```
