@@ -27,7 +27,7 @@ order: -1
 ## 1. 查看ChromeDriver版本
 
 访问以下链接查看适用于当前稳定版Chrome的ChromeDriver版本：
-https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+https://chromedriver.storage.googleapis.com/LATEST_RELEASE
 
 ## 2. 下载对应版本
 

@@ -12,11 +12,6 @@ export default sidebar({
       icon: "fa-brands fa-readme",
       prefix: "/reading/",
       link: "/reading/",
-      children: [
-        "社会认知",
-        "影响力",
-        "自我认知",
-      ],
     },
     
     // 指定显示页面
