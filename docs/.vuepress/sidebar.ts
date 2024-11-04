@@ -11,11 +11,11 @@ export default sidebar({
     { text: "读书笔记",
       icon: "fa-brands fa-readme",
       prefix: "/reading/",
-      link: "",
+      link: "/reading/",
       children: [
-        "社会认知.md",
-        "影响力.md",
-        "自我认知.md",
+        "社会认知",
+        "影响力",
+        "自我认知",
       ],
     },
     
@@ -26,16 +26,7 @@ export default sidebar({
       prefix: "/apps/",
       link: "",
       collapsible: true,
-      children: [
-        "Applist.md",
-        "toolbox.md",
-        {
-          text: "其他",
-          icon: "fa-solid fa-code-compare",
-          collapsible: true,
-          children: ["design.md"],
-        },
-      ],
+      children: "structure",
     },
     {
       text: "🌐 页面开发",
