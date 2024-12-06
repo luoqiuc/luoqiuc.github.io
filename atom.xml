@@ -4,7 +4,7 @@
   <title>LearnData 开源笔记</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
   <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2024-12-06T06:12:21.515Z</updated>
+  <updated>2024-12-06T08:25:06.005Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
@@ -245,14 +245,125 @@
     <published>2024-09-27T03:15:12.000Z</published>
   </entry>
   <entry>
-    <title type="text">Windows Server 2022 安装MySQL8.0.39</title>
+    <title type="text">Windows Server 安装MySQL8.0.39</title>
     <id>https://newzone.top/posts/2024-09-29-blog_win_mysql.html</id>
     <link href="https://newzone.top/posts/2024-09-29-blog_win_mysql.html"/>
-    <updated>2024-10-29T08:22:42.000Z</updated>
+    <updated>2024-12-06T08:23:52.000Z</updated>
     <summary type="html"><![CDATA[
-]]></summary>
+<h2>准备工作</h2>
+<ol>
+<li>下载 MySQL 8.0 zip 压缩包</li>
+<li>选择安装目录，如 <code>C:\data\mysql</code></li>
+</ol>
+<h2>安装步骤</h2>
+<h3>1. 解压安装包</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 将下载的 mysql-8.0.39-winx64.zip 解压到指定目录</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 例如：C:\data\mysql</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
     <content type="html"><![CDATA[
+<h2>准备工作</h2>
+<ol>
+<li>下载 MySQL 8.0 zip 压缩包</li>
+<li>选择安装目录，如 <code>C:\data\mysql</code></li>
+</ol>
+<h2>安装步骤</h2>
+<h3>1. 解压安装包</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 将下载的 mysql-8.0.39-winx64.zip 解压到指定目录</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 例如：C:\data\mysql</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>2. 初始化数据目录</h3>
+<div class="language-cmd line-numbers-mode" data-highlighter="shiki" data-ext="cmd" data-title="cmd" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">cd C:\</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">data</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">\</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">mysql</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">\</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">bin</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">mysqld</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> --</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">initialize</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">insecure</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>3. 安装 MySQL 服务</h3>
+<div class="language-cmd line-numbers-mode" data-highlighter="shiki" data-ext="cmd" data-title="cmd" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">mysqld</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> --</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">install</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> MySQL80</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> --</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">defaults</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">file</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">C</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:\</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">data</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">\</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">mysql</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">\my.ini</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h3>4. 启动 MySQL 服务</h3>
+<div class="language-cmd line-numbers-mode" data-highlighter="shiki" data-ext="cmd" data-title="cmd" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">net start MySQL80</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>MySQL 配置文件 (my.ini)</h2>
+<div class="language-ini line-numbers-mode" data-highlighter="shiki" data-ext="ini" data-title="ini" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">[mysqld]</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 打开binlog</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">log-bin</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">mysql-bin</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 选择ROW(行)模式</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">binlog-format</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">ROW</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 配置MySQL replaction需要定义，不要和canal的slaveId重复</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">server_id</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">1</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 设置3306端口</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">port</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">3306</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 设置mysql的安装目录</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">basedir</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"C:\data\mysql"</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 设置mysql数据库的数据的存放目录</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">datadir</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"C:\data\mysql\data"</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 允许最大连接数</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">max_connections</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">5000</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 允许连接失败的次数。</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">max_connect_errors</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">100</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 服务端使用的字符集默认为utf8mb4</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">character-set-server</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">utf8mb4</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 创建新表时将使用的默认存储引擎</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">default-storage-engine</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">INNODB</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 默认使用"mysql_native_password"插件认证</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">default_authentication_plugin</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">mysql_native_password</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 忽略大小写</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">lower_case_table_names</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379"> 1</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 添加以下优化配置</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">innodb_buffer_pool_size</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">2G  </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 根据服务器内存大小调整，建议设为总内存的50%-70%</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">innodb_log_file_size</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">256M</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">innodb_log_buffer_size</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">16M</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">innodb_flush_log_at_trx_commit</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">1</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">innodb_lock_wait_timeout</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">50</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 临时表大小</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">tmp_table_size</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">64M</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">max_heap_table_size</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">64M</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 日志配置</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">log_error</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">C:\data\mysql\data\mysql-error.log</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">slow_query_log</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">1</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">slow_query_log_file</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">C:\data\mysql\data\mysql-slow.log</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">long_query_time</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">2</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">[mysql]</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 设置mysql客户端默认字符集</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">default-character-set</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">utf8mb4</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">[client]</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"># 设置mysql客户端连接服务端时默认使用的端口</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">port</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">3306</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">default-character-set</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#24292E;--shiki-dark:#98C379">utf8mb4</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>5. 设置 root 密码</h3>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">-- 登录MySQL</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">mysql </span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">u </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">root</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">-- 设置root密码</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ALTER</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> USER</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'root'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">@</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'localhost'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> IDENTIFIED </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">BY</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'YourStrongPassword'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>6. 配置远程访问</h3>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" data-title="sql" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">-- 更新 root 用户的 host 为 %</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">UPDATE</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> mysql</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">user</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SET</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> host</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'%'</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> WHERE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> user</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'root'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">-- 刷新权限</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">FLUSH PRIVILEGES;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>安全建议</h2>
+<ol>
+<li>使用复杂的强密码</li>
+<li>配置防火墙</li>
+<li>限制 root 用户权限</li>
+<li>考虑创建专门的远程访问用户</li>
+</ol>
+<h2>常见问题排查</h2>
+<ul>
+<li>检查服务是否正常运行：<code>net start MySQL80</code></li>
+<li>查看错误日志：<code>C:\data\mysql\data\mysql-error.log</code></li>
+<li>检查端口是否被占用：<code>netstat -ano | findstr :3306</code></li>
+</ul>
+<h2>性能优化提示</h2>
+<ul>
+<li>根据服务器实际内存调整 <code>innodb_buffer_pool_size</code></li>
+<li>定期检查慢查询日志</li>
+<li>配置合理的备份策略</li>
+</ul>
+<h2>结语</h2>
+<p>安装 MySQL 需要谨慎，特别注意安全配置和权限管理。根据实际业务需求调整配置，确保数据库的性能和安全。</p>
 ]]></content>
+    <category term="MySQL"/>
     <published>2024-10-29T08:22:42.000Z</published>
   </entry>
   <entry>
