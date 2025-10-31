@@ -77,14 +77,14 @@ export default sidebar({
       collapsible: true,
       children: "structure",
     },
-    {
-      text: "博客文章",
-      icon: "fa-solid fa-feather-pointed",
-      prefix: "/_posts/",
-      link: "/blog",
-      collapsible: true,
-      children: "structure",
-    },
+    // {
+    //   text: "博客文章",
+    //   icon: "fa-solid fa-feather-pointed",
+    //   prefix: "/_posts/",
+    //   link: "/blog",
+    //   collapsible: true,
+    //   children: "structure",
+    // },
     // {
     //   text: "AI绘画",
     //   icon: "fa-solid fa-feather-pointed",
