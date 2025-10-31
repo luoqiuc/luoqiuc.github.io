@@ -70,13 +70,13 @@ export default sidebar({
         },
       ],
     },
-    {
-      text: "🛖 生活记录",
-      icon: "",
-      prefix: "/family/",
-      collapsible: true,
-      children: "structure",
-    },
+    // {
+    //   text: "🛖 生活记录",
+    //   icon: "fa-solid ",
+    //   prefix: "/family/",
+    //   collapsible: true,
+    //   children: "structure",
+    // },
     // {
     //   text: "博客文章",
     //   icon: "fa-solid fa-feather-pointed",
