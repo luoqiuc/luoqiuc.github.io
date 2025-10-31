@@ -4,7 +4,7 @@
   <title>LearnData 开源笔记</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
   <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2025-10-31T04:36:36.317Z</updated>
+  <updated>2025-10-31T06:55:01.923Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
@@ -425,10 +425,10 @@
     <published>2024-10-29T08:22:42.000Z</published>
   </entry>
   <entry>
-    <title type="text">如何提高Redis服务器的最大打开文件数限制</title>
+    <title type="text">Redis 最大打开文件数</title>
     <id>https://newzone.top/posts/2024-10-10-blog_redis.html</id>
     <link href="https://newzone.top/posts/2024-10-10-blog_redis.html"/>
-    <updated>2024-10-10T02:50:16.000Z</updated>
+    <updated>2025-10-31T06:53:49.000Z</updated>
     <summary type="html"><![CDATA[
 <p>在运行高并发Redis服务时,我们可能会遇到"max number of clients reached"的错误。这通常是因为系统对可打开文件数的限制太低导致的。本文将指导您如何提高Redis服务器的最大打开文件数(Max open files)限制。</p>
 <h2>问题诊断</h2>
@@ -498,10 +498,10 @@
     <published>2024-10-10T02:50:16.000Z</published>
   </entry>
   <entry>
-    <title type="text">CentOS 7系统 OpenSSH和OpenSSL版本升级指南</title>
+    <title type="text">CentOS7 OpenSSH和OpenSSL升级</title>
     <id>https://newzone.top/posts/2024-10-17-blog_openssh_l.html</id>
     <link href="https://newzone.top/posts/2024-10-17-blog_openssh_l.html"/>
-    <updated>2024-10-18T08:51:59.000Z</updated>
+    <updated>2025-10-31T06:53:49.000Z</updated>
     <summary type="html"><![CDATA[
 <p>在处理服务器安全问题时，及时升级关键组件的版本是非常重要的。本文将详细介绍如何在CentOS 7系统上升级OpenSSH和OpenSSL到最新稳定版本，以解决已知的安全漏洞。</p>
 <h2>环境说明</h2>
@@ -733,10 +733,10 @@
     <published>2024-10-17T07:21:39.000Z</published>
   </entry>
   <entry>
-    <title type="text">Excel VBA 自动填充空白并合并相同值的解决方案</title>
+    <title type="text">Excel VBA 自动填充空白并合并相同值</title>
     <id>https://newzone.top/posts/2024-10-23-blog_excel01.html</id>
     <link href="https://newzone.top/posts/2024-10-23-blog_excel01.html"/>
-    <updated>2024-10-23T06:58:47.000Z</updated>
+    <updated>2025-10-31T06:53:49.000Z</updated>
     <summary type="html"><![CDATA[
 <h2>问题背景</h2>
 <p>在Excel中经常会遇到这样的数据处理需求：一列数据中存在多个空白单元格，需要用其上方最近的非空值填充，然后将相同的连续值合并成一个单元格。比如：</p>

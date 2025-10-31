@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 31 Oct 2025 04:36:36 GMT</pubDate>
-    <lastBuildDate>Fri, 31 Oct 2025 04:36:36 GMT</lastBuildDate>
+    <pubDate>Fri, 31 Oct 2025 06:55:01 GMT</pubDate>
+    <lastBuildDate>Fri, 31 Oct 2025 06:55:01 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>网站评论系统</category>
@@ -377,11 +377,11 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>如何提高Redis服务器的最大打开文件数限制</title>
+      <title>Redis 最大打开文件数</title>
       <link>https://newzone.top/posts/2024-10-10-blog_redis.html</link>
       <guid>https://newzone.top/posts/2024-10-10-blog_redis.html</guid>
-      <source url="https://newzone.top/rss.xml">如何提高Redis服务器的最大打开文件数限制</source>
-      <description>如何提高Redis服务器的最大打开文件数限制 在运行高并发Redis服务时,我们可能会遇到&amp;quot;max number of clients reached&amp;quot;的错误。这通常是因为系统对可打开文件数的限制太低导致的。本文将指导您如何提高Redis服务器的最大打开文件数(Max open files)限制。 问题诊断 首先,让我们查看当前的系统限制和Redis进...</description>
+      <source url="https://newzone.top/rss.xml">Redis 最大打开文件数</source>
+      <description>Redis 最大打开文件数 在运行高并发Redis服务时,我们可能会遇到&amp;quot;max number of clients reached&amp;quot;的错误。这通常是因为系统对可打开文件数的限制太低导致的。本文将指导您如何提高Redis服务器的最大打开文件数(Max open files)限制。 问题诊断 首先,让我们查看当前的系统限制和Redis进程的限制: 检查系...</description>
       <category>Redis</category>
       <pubDate>Thu, 10 Oct 2024 02:50:16 GMT</pubDate>
       <content:encoded><![CDATA[
@@ -442,11 +442,11 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>CentOS 7系统 OpenSSH和OpenSSL版本升级指南</title>
+      <title>CentOS7 OpenSSH和OpenSSL升级</title>
       <link>https://newzone.top/posts/2024-10-17-blog_openssh_l.html</link>
       <guid>https://newzone.top/posts/2024-10-17-blog_openssh_l.html</guid>
-      <source url="https://newzone.top/rss.xml">CentOS 7系统 OpenSSH和OpenSSL版本升级指南</source>
-      <description>CentOS 7系统 OpenSSH和OpenSSL版本升级指南 在处理服务器安全问题时，及时升级关键组件的版本是非常重要的。本文将详细介绍如何在CentOS 7系统上升级OpenSSH和OpenSSL到最新稳定版本，以解决已知的安全漏洞。 环境说明 当前系统版本 当前组件版本 现存安全漏洞 当前版本存在以下安全漏洞： OpenSSH 安全漏洞(CVE...</description>
+      <source url="https://newzone.top/rss.xml">CentOS7 OpenSSH和OpenSSL升级</source>
+      <description>CCentOS7 OpenSSH和OpenSSL升级 在处理服务器安全问题时，及时升级关键组件的版本是非常重要的。本文将详细介绍如何在CentOS 7系统上升级OpenSSH和OpenSSL到最新稳定版本，以解决已知的安全漏洞。 环境说明 当前系统版本 当前组件版本 现存安全漏洞 当前版本存在以下安全漏洞： OpenSSH 安全漏洞(CVE-2023-...</description>
       <category>CentOS</category>
       <category>安全</category>
       <pubDate>Thu, 17 Oct 2024 07:21:39 GMT</pubDate>
@@ -671,11 +671,11 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>Excel VBA 自动填充空白并合并相同值的解决方案</title>
+      <title>Excel VBA 自动填充空白并合并相同值</title>
       <link>https://newzone.top/posts/2024-10-23-blog_excel01.html</link>
       <guid>https://newzone.top/posts/2024-10-23-blog_excel01.html</guid>
-      <source url="https://newzone.top/rss.xml">Excel VBA 自动填充空白并合并相同值的解决方案</source>
-      <description>Excel VBA: 自动填充空白并合并相同值的解决方案 问题背景 在Excel中经常会遇到这样的数据处理需求：一列数据中存在多个空白单元格，需要用其上方最近的非空值填充，然后将相同的连续值合并成一个单元格。比如： 需要将其转换为三个合并的单元格，每个单元格分别包含1、2、3。 合并前 Alt text 合并后 Alt text 解决方案 我们可以通过...</description>
+      <source url="https://newzone.top/rss.xml">Excel VBA 自动填充空白并合并相同值</source>
+      <description>Excel VBA 自动填充空白并合并相同值 问题背景 在Excel中经常会遇到这样的数据处理需求：一列数据中存在多个空白单元格，需要用其上方最近的非空值填充，然后将相同的连续值合并成一个单元格。比如： 需要将其转换为三个合并的单元格，每个单元格分别包含1、2、3。 合并前 Alt text 合并后 Alt text 解决方案 我们可以通过VBA宏来自...</description>
       <category>Excel</category>
       <pubDate>Wed, 23 Oct 2024 06:58:47 GMT</pubDate>
       <content:encoded><![CDATA[
