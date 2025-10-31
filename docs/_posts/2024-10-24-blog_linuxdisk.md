@@ -1,5 +1,5 @@
 ---
-title: CentOS 7系统在线扩展根分区大小的完整教程
+title: CentOS7在线扩展根分区
 date: 2024年10月24日12:16:05
 # 一个页面可以有多个分类
 category:
@@ -17,7 +17,7 @@ star: false
 order: -1
 ---
 
-# CentOS 7系统在线扩展根分区大小的完整教程
+# CentOS7在线扩展根分区
 
 ## 背景
 

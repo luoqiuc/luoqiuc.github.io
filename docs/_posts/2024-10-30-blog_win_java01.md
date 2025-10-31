@@ -1,5 +1,5 @@
 ---
-title: Windows系统下手动配置Java环境变量详细教程
+title: Windows系统配置Java环境变量
 date: 2024年10月30日12:04:40
 # 一个页面可以有多个分类
 category:
@@ -19,7 +19,7 @@ star: false
 order: -0.01
 ---
 
-# Windows系统下手动配置Java环境变量详细教程
+# Windows系统配置Java环境变量
 
 在Windows系统中使用Java进行开发，配置环境变量是必不可少的一步。本文将详细介绍如何在Windows系统中手动配置Java环境变量。
 

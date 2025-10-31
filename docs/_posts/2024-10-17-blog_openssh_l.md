@@ -1,5 +1,5 @@
 ---
-title: CentOS 7系统 OpenSSH和OpenSSL版本升级指南
+title: CentOS7 OpenSSH和OpenSSL升级
 date: 2024年10月17日12:04:15
 # 一个页面可以有多个分类
 category:
@@ -20,7 +20,7 @@ star: false
 order: -0.01
 ---
 
-# CentOS 7系统 OpenSSH和OpenSSL版本升级指南
+# CCentOS7 OpenSSH和OpenSSL升级
 
 在处理服务器安全问题时，及时升级关键组件的版本是非常重要的。本文将详细介绍如何在CentOS 7系统上升级OpenSSH和OpenSSL到最新稳定版本，以解决已知的安全漏洞。
 

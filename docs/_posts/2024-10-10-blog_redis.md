@@ -1,5 +1,5 @@
 ---
-title: 如何提高Redis服务器的最大打开文件数限制
+title: Redis 最大打开文件数
 date: 2024年10月10日10:47:49
 # 一个页面可以有多个分类
 category:
@@ -19,7 +19,7 @@ star: false
 order: -0.01
 ---
 
-# 如何提高Redis服务器的最大打开文件数限制
+# Redis 最大打开文件数
 
 在运行高并发Redis服务时,我们可能会遇到"max number of clients reached"的错误。这通常是因为系统对可打开文件数的限制太低导致的。本文将指导您如何提高Redis服务器的最大打开文件数(Max open files)限制。
 
