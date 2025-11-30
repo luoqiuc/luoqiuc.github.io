@@ -1,4 +1,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://newzone.top/sitemap.xml
+Sitemap: https://note.luoqiu.site/sitemap.xml

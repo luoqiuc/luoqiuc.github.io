@@ -1,19 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://newzone.top/atom.xsl"?>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://note.luoqiu.site/atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
-  <id>https://newzone.top/</id>
+  <id>https://note.luoqiu.site/</id>
   <title>LearnData 开源笔记</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
-  <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2025-11-30T03:07:28.599Z</updated>
+  <icon>https://note.luoqiu.site/favicon.ico</icon>
+  <updated>2025-11-30T03:57:12.945Z</updated>
   <generator>@vuepress/plugin-feed</generator>
-  <link rel="self" href="https://newzone.top/atom.xml"/>
-  <link rel="alternate" href="https://newzone.top/"/>
-  <category term="工具"/>
+  <link rel="self" href="https://note.luoqiu.site/atom.xml"/>
+  <link rel="alternate" href="https://note.luoqiu.site/"/>
   <category term="使用指南"/>
+  <category term="工具"/>
+  <entry>
+    <title type="text">加密</title>
+    <id>https://note.luoqiu.site/encrypt/</id>
+    <link href="https://note.luoqiu.site/encrypt/"/>
+    <updated>2025-11-30T01:50:37.000Z</updated>
+    <summary type="html"><![CDATA[<p>加密内容，支持 Markdown 和 HTML 语言。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>加密内容，支持 Markdown 和 HTML 语言。</p>
+]]></content>
+    <category term="使用指南"/>
+    <published>2025-01-24T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">加密 1</title>
+    <id>https://note.luoqiu.site/encrypt/encrypt01.html</id>
+    <link href="https://note.luoqiu.site/encrypt/encrypt01.html"/>
+    <updated>2025-11-30T01:50:37.000Z</updated>
+    <summary type="html"><![CDATA[<p>加密内容，支持 Markdown 和 HTML 语言。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>加密内容，支持 Markdown 和 HTML 语言。</p>
+]]></content>
+    <category term="使用指南"/>
+    <published>2025-01-24T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">加密 2</title>
+    <id>https://note.luoqiu.site/encrypt/encrypt02.html</id>
+    <link href="https://note.luoqiu.site/encrypt/encrypt02.html"/>
+    <updated>2025-11-30T01:50:37.000Z</updated>
+    <summary type="html"><![CDATA[<p>加密内容，支持 Markdown 和 HTML 语言。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>加密内容，支持 Markdown 和 HTML 语言。</p>
+]]></content>
+    <category term="使用指南"/>
+    <published>2025-01-24T00:00:00.000Z</published>
+  </entry>
   <entry>
     <title type="text">博客文章样例 2</title>
-    <id>https://newzone.top/posts/2024-03-02-blog_example2.html</id>
-    <link href="https://newzone.top/posts/2024-03-02-blog_example2.html"/>
+    <id>https://note.luoqiu.site/posts/2024-03-02-blog_example2.html</id>
+    <link href="https://note.luoqiu.site/posts/2024-03-02-blog_example2.html"/>
     <updated>2025-11-30T01:50:37.000Z</updated>
     <summary type="html"><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
 ]]></summary>
@@ -24,8 +60,8 @@
   </entry>
   <entry>
     <title type="text">博客文章样例</title>
-    <id>https://newzone.top/posts/2024-03-01-blog_example.html</id>
-    <link href="https://newzone.top/posts/2024-03-01-blog_example.html"/>
+    <id>https://note.luoqiu.site/posts/2024-03-01-blog_example.html</id>
+    <link href="https://note.luoqiu.site/posts/2024-03-01-blog_example.html"/>
     <updated>2025-11-30T01:50:37.000Z</updated>
     <summary type="html"><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
 ]]></summary>
