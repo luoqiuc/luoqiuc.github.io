@@ -6,66 +6,858 @@
     <link>https://note.luoqiu.site/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 30 Nov 2025 03:57:12 GMT</pubDate>
-    <lastBuildDate>Sun, 30 Nov 2025 03:57:12 GMT</lastBuildDate>
+    <pubDate>Sun, 30 Nov 2025 04:13:25 GMT</pubDate>
+    <lastBuildDate>Sun, 30 Nov 2025 04:13:25 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>使用指南</category>
-    <category>工具</category>
+    <category>网站评论系统</category>
+    <category>Linux</category>
+    <category>MySQL</category>
+    <category>curl</category>
+    <category>Redis</category>
+    <category>CentOS</category>
+    <category>安全</category>
+    <category>Excel</category>
     <item>
-      <title>加密</title>
-      <link>https://note.luoqiu.site/encrypt/</link>
-      <guid>https://note.luoqiu.site/encrypt/</guid>
-      <source url="https://note.luoqiu.site/rss.xml">加密</source>
-      <description>加密内容，支持 Markdown 和 HTML 语言。</description>
-      <category>使用指南</category>
-      <pubDate>Fri, 24 Jan 2025 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>加密内容，支持 Markdown 和 HTML 语言。</p>
+      <title>如何在markdown中显示删除线</title>
+      <link>https://note.luoqiu.site/posts/2024-09-13-blog_markdown01.html</link>
+      <guid>https://note.luoqiu.site/posts/2024-09-13-blog_markdown01.html</guid>
+      <source url="https://note.luoqiu.site/rss.xml">如何在markdown中显示删除线</source>
+      <description>在需要显示删除线的内容两边分别添加两个波浪号 显示效果 中秋节快乐！~~</description>
+      <pubDate>Sun, 30 Nov 2025 04:12:19 GMT</pubDate>
+      <content:encoded><![CDATA[<p>在需要显示删除线的内容两边分别添加两个波浪号</p>
+<div class="language-txt line-numbers-mode" data-highlighter="shiki" data-ext="txt" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-txt"><span class="line"><span>~~这里是需要显示删除线的内容~~</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>显示效果</p>
+<blockquote>
+<p><s>这里是需要显示删除线的内容</s></p>
+</blockquote>
+<p>中秋节快乐！~~</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>加密 1</title>
-      <link>https://note.luoqiu.site/encrypt/encrypt01.html</link>
-      <guid>https://note.luoqiu.site/encrypt/encrypt01.html</guid>
-      <source url="https://note.luoqiu.site/rss.xml">加密 1</source>
-      <description>加密内容，支持 Markdown 和 HTML 语言。</description>
-      <category>使用指南</category>
-      <pubDate>Fri, 24 Jan 2025 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>加密内容，支持 Markdown 和 HTML 语言。</p>
+      <title>私有部署twikoo</title>
+      <link>https://note.luoqiu.site/posts/2024-09-13-blog_tkserver.html</link>
+      <guid>https://note.luoqiu.site/posts/2024-09-13-blog_tkserver.html</guid>
+      <source url="https://note.luoqiu.site/rss.xml">私有部署twikoo</source>
+      <description>私有部署 注意 私有部署的环境需配合 1.6.0 或以上版本的 twikoo.js 使用 私有部署对服务器系统没有要求，Windows、Ubuntu、CentOS、macOS 等常用系统均支持。 私有部署涉及终端操作、申请证书、配置反向代理或负载均衡等高级操作，如果对这些不太了解，建议优先选择其他方式部署。 服务端下载安装 Node.js 安装 Twi...</description>
+      <category>网站评论系统</category>
+      <pubDate>Sun, 30 Nov 2025 04:12:19 GMT</pubDate>
+      <content:encoded><![CDATA[
+<blockquote>
+<p>注意
+私有部署的环境需配合 1.6.0 或以上版本的 twikoo.js 使用
+私有部署对服务器系统没有要求，Windows、Ubuntu、CentOS、macOS 等常用系统均支持。
+私有部署涉及终端操作、申请证书、配置反向代理或负载均衡等高级操作，如果对这些不太了解，建议优先选择其他方式部署。</p>
+</blockquote>
+<ol>
+<li>服务端下载安装 <a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener noreferrer">Node.js</a></li>
+<li>安装 Twikoo server: <code>npm i -g tkserver</code></li>
+<li>根据需要配置环境变量，所有的环境变量都是可选的</li>
+</ol>
+<p>|名称	|描述	|默认值|
+|</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>加密 2</title>
-      <link>https://note.luoqiu.site/encrypt/encrypt02.html</link>
-      <guid>https://note.luoqiu.site/encrypt/encrypt02.html</guid>
-      <source url="https://note.luoqiu.site/rss.xml">加密 2</source>
-      <description>加密内容，支持 Markdown 和 HTML 语言。</description>
-      <category>使用指南</category>
-      <pubDate>Fri, 24 Jan 2025 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>加密内容，支持 Markdown 和 HTML 语言。</p>
+      <title>Linux常用技巧</title>
+      <link>https://note.luoqiu.site/posts/2024-09-26-blog_linuxshell.html</link>
+      <guid>https://note.luoqiu.site/posts/2024-09-26-blog_linuxshell.html</guid>
+      <source url="https://note.luoqiu.site/rss.xml">Linux常用技巧</source>
+      <description>Linux常用技巧 在当前目录下查找所有文件（递归）中包含指定字符的文件</description>
+      <category>Linux</category>
+      <pubDate>Sun, 30 Nov 2025 01:50:37 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>在当前目录下查找所有文件（递归）中包含指定字符的文件</h2>
+<div class="language-shell line-numbers-mode" data-highlighter="shiki" data-ext="shell" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-shell"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">grep</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -rn</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "strings"./</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>MySQL版本升级（8.0.31-&amp;gt;8.0.37）</title>
+      <link>https://note.luoqiu.site/posts/2024-09-27-blog_Upgrading%20MySQL.html</link>
+      <guid>https://note.luoqiu.site/posts/2024-09-27-blog_Upgrading%20MySQL.html</guid>
+      <source url="https://note.luoqiu.site/rss.xml">MySQL版本升级（8.0.31-&amp;gt;8.0.37）</source>
+      <description>MySQL版本升级（8.0.31-&amp;gt;8.0.37） 官方MySQL8.0升级文档 就地升级 就地升级涉及关闭旧 MySQL 服务器、用新 MySQL 二进制文件或软件包替换旧 MySQL 二进制文件或软件包、在现有数据目录上重新启动 MySQL，以及升级现有安装中需要升级的任何剩余部分。有关可能需要升级的内容的详细信息，请参见第 3.4 节“MySQL...</description>
+      <category>MySQL</category>
+      <pubDate>Sun, 30 Nov 2025 04:12:19 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/upgrading.html" target="_blank" rel="noopener noreferrer">官方MySQL8.0升级文档</a></p>
+<h2>就地升级</h2>
+<p>就地升级涉及关闭旧 MySQL 服务器、用新 MySQL 二进制文件或软件包替换旧 MySQL 二进制文件或软件包、在现有数据目录上重新启动 MySQL，以及升级现有安装中需要升级的任何剩余部分。有关可能需要升级的内容的详细信息，请参见<a href="https://dev.mysql.com/doc/refman/8.0/en/upgrading-what-is-upgraded.html" target="_blank" rel="noopener noreferrer">第 3.4 节“MySQL 升级过程升级的内容”</a>。</p>
+<blockquote>
+<p>注意
+如果您要升级最初由安装多个 RPM 包生成的安装，请升级所有包，而不是仅升级部分包。例如，如果您之前安装了服务器和客户端 RPM，请不要仅升级服务器 RPM。
+对于某些 Linux 平台，从 RPM 或 Debian 软件包安装 MySQL 包括 systemd 支持，用于管理 MySQL 服务器的启动和关闭。在这些平台上，未安装 <a href="https://dev.mysql.com/doc/refman/8.0/en/mysqld-safe.html" target="_blank" rel="noopener noreferrer">mysqld_safe</a>。在这种情况下，请使用 systemd 启动和关闭服务器，而不是使用以下说明中的方法。请参见<a href="https://dev.mysql.com/doc/refman/8.0/en/using-systemd.html" target="_blank" rel="noopener noreferrer">第 2.5.9 节“使用 systemd 管理 MySQL 服务器”</a>。
+有关 MySQL Cluster 安装的升级，另请参见 <a href="https://dev.mysql.com/doc/refman/8.0/en/upgrade-binary-package.html#upgrading-cluster" target="_blank" rel="noopener noreferrer">MySQL Cluster 升级</a>。</p>
+</blockquote>
+<blockquote>
+<p>其他版本升级可参考MySQL官方文档</p>
+</blockquote>
+<p>本次8.0.31升级到8.0.37 小版本升级，直接下载rpm包升级。</p>
+<p><a href="https://downloads.mysql.com/archives/community/" target="_blank" rel="noopener noreferrer">MySQL旧版本下载地址</a></p>
+<p><a href="https://cdn.mysql.com/archives/mysql-8.0/mysql-8.0.37-1.el7.x86_64.rpm-bundle.tar" target="_blank" rel="noopener noreferrer">8.0.37rpm包下载地址</a></p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 停止MySQL，如果使用`mysqldump`导出数据，需要停止MySQL前操作</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> stop</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysqld</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 备份数据目录再升级，或者使用`mysqldump`导出数据</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">more</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /etc/my.cnf</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">|</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">grep</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> datadir</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">/var/lib/mysql</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">cd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/lib/</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">tar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> zcf</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql.tgz</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 解压rpm包</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">tar</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> xf</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-8.0.37-1.el7.x86_64.rpm-bundle.tar</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ll</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 解压后的rpm包</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">-rw-r--r--</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 7155</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31415</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  16768148</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Mar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 22:51</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-client-8.0.37-1.el7.x86_64.rpm</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">-rw-r--r--</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 7155</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31415</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">   3621444</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Mar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 22:52</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-client-plugins-8.0.37-1.el7.x86_64.rpm</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">-rw-r--r--</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 7155</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31415</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">    681816</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Mar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 22:52</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-common-8.0.37-1.el7.x86_64.rpm</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">-rw-r--r--</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 7155</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31415</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 538409072</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Mar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 22:53</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-debuginfo-8.0.37-1.el7.x86_64.rpm</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">-rw-r--r--</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 7155</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31415</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">   1948516</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Mar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 22:53</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-devel-8.0.37-1.el7.x86_64.rpm</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">-rw-r--r--</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 7155</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31415</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">   4218268</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Mar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 22:53</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-embedded-compat-8.0.37-1.el7.x86_64.rpm</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">-rw-r--r--</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 7155</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31415</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">   2344724</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Mar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 22:53</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-icu-data-files-8.0.37-1.el7.x86_64.rpm</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">-rw-r--r--</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 7155</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31415</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">   1564000</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Mar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 22:53</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-libs-8.0.37-1.el7.x86_64.rpm</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">-rw-r--r--</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 7155</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31415</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">    685676</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Mar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 22:53</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-libs-compat-8.0.37-1.el7.x86_64.rpm</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">-rw-r--r--</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 7155</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31415</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  67951180</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Mar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 22:54</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-server-8.0.37-1.el7.x86_64.rpm</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">-rw-r--r--</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 7155</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31415</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  25689952</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Mar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 22:54</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-server-debug-8.0.37-1.el7.x86_64.rpm</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">-rw-r--r--</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 7155</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31415</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 379877568</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Mar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 31</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 22:56</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-test-8.0.37-1.el7.x86_64.rpm</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 只有原来已安装的包才会更新</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> update</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">*</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">-8.0.37-1.el7.x86_64.rpm</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># `devel`、`test`、`debug`之前没安装的，也不会更新</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">Package</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-devel</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> not</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> installed,</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> cannot</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> update</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> it.</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Run</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> to</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> it</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> instead.</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">Package</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-server-debug</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> not</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> installed,</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> cannot</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> update</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> it.</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Run</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> to</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> it</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> instead.</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">Package</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> mysql-community-test</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> not</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> installed,</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> cannot</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> update</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> it.</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Run</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> to</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> it</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> instead.</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 下面是本次升级的rpm包</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">--</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt; </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">Running</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> transaction</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> check</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Linux清理系统缓存</title>
+      <link>https://note.luoqiu.site/posts/2024-09-27-blog_dropcaches.html</link>
+      <guid>https://note.luoqiu.site/posts/2024-09-27-blog_dropcaches.html</guid>
+      <source url="https://note.luoqiu.site/rss.xml">Linux清理系统缓存</source>
+      <description>Linux缓存管理：如何安全地清理系统缓存 在Linux系统中，内存管理是一个关键的性能因素。虽然Linux内核通常能够有效地管理内存和缓存，但有时我们可能需要手动干预。本文将详细介绍如何安全地清理Linux系统缓存，特别是在CentOS等系统中。 目录 Linux缓存管理：如何安全地清理系统缓存 目录 理解/proc/sys/vm/drop_cach...</description>
+      <category>Linux</category>
+      <pubDate>Sun, 30 Nov 2025 04:12:19 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>在Linux系统中，内存管理是一个关键的性能因素。虽然Linux内核通常能够有效地管理内存和缓存，但有时我们可能需要手动干预。本文将详细介绍如何安全地清理Linux系统缓存，特别是在CentOS等系统中。</p>
+<h2>目录</h2>
+<ul>
+<li><a href="#linux%E7%BC%93%E5%AD%98%E7%AE%A1%E7%90%86%E5%A6%82%E4%BD%95%E5%AE%89%E5%85%A8%E5%9C%B0%E6%B8%85%E7%90%86%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98">Linux缓存管理：如何安全地清理系统缓存</a>
+<ul>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#%E7%90%86%E8%A7%A3procsysvmdrop_caches">理解/proc/sys/vm/drop_caches</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%B8%85%E7%90%86%E7%BC%93%E5%AD%98">为什么要清理缓存？</a></li>
+<li><a href="#%E6%B8%85%E7%90%86%E7%BC%93%E5%AD%98%E7%9A%84%E6%AD%A5%E9%AA%A4">清理缓存的步骤</a></li>
+<li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E5%92%8C%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">注意事项和最佳实践</a></li>
+<li><a href="#%E7%BB%93%E8%AE%BA">结论</a></li>
+</ul>
+</li>
+</ul>
+<h2>理解/proc/sys/vm/drop_caches</h2>
+<p>在Linux系统中，<code>/proc/sys/vm/drop_caches</code>是一个用于手动清理系统缓存的内核接口。它可以有以下三个值：</p>
+<ul>
+<li>1: 清理页面缓存</li>
+<li>2: 清理dentries和inodes</li>
+<li>3: 清理页面缓存、dentries和inodes</li>
+</ul>
+<p>默认情况下，这个值是0，表示系统没有执行任何手动缓存清理操作。</p>
+<h2>为什么要清理缓存？</h2>
+<p>在大多数情况下，让Linux内核自动管理缓存是最佳选择。然而，在某些特殊情况下，手动清理缓存可能会有所帮助：</p>
+<ol>
+<li>进行性能测试</li>
+<li>诊断内存问题</li>
+<li>在内存紧张的系统上释放更多可用内存</li>
+</ol>
+<p>请注意，频繁或不必要地清理缓存可能会降低系统性能，因为系统需要重新从磁盘读取数据。</p>
+<h2>清理缓存的步骤</h2>
+<p>以下是安全清理Linux系统缓存的步骤：</p>
+<ol>
+<li>
+<p>切换到root用户（如果还不是root）:</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> su</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> -</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
+<li>
+<p>执行sync命令，确保所有待写入的数据都已经存储到磁盘:</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sync</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
+<li>
+<p>清理缓存:</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &gt; </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/proc/sys/vm/drop_caches</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
+<li>
+<p>验证更改:</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /proc/sys/vm/drop_caches</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
+</ol>
+<h2>注意事项和最佳实践</h2>
+<ol>
+<li>
+<p><strong>谨慎使用</strong>：在生产环境中要特别小心，因为清理缓存可能会暂时影响系统性能。</p>
+</li>
+<li>
+<p><strong>使用sync</strong>：总是在清理缓存前运行sync命令，以防止数据丢失。</p>
+</li>
+<li>
+<p><strong>选择性清理</strong>：根据需求，可以只清理部分缓存（使用1或2而不是3）。</p>
+</li>
+<li>
+<p><strong>自动化</strong>：如果需要定期清理缓存，考虑创建一个脚本或设置定时任务。</p>
+</li>
+<li>
+<p><strong>监控影响</strong>：在清理缓存后，密切关注系统性能，以了解这个操作的影响。</p>
+</li>
+<li>
+<p><strong>了解原因</strong>：在执行缓存清理之前，先了解为什么需要这么做。可能有其他更好的解决方案。</p>
+</li>
+</ol>
+<h2>结论</h2>
+<p>手动清理Linux系统缓存是一个强大的工具，但应该谨慎使用。在大多数情况下，让Linux内核自动管理缓存是最佳选择。如果您决定手动清理缓存，请确保理解其影响，并遵循本文outlined的最佳实践。</p>
+<p>记住，系统管理是关于平衡和理解您的特定需求。总是在做出可能影响系统性能的决定之前，先评估利弊。</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>博客文章样例 2</title>
-      <link>https://note.luoqiu.site/posts/2024-03-02-blog_example2.html</link>
-      <guid>https://note.luoqiu.site/posts/2024-03-02-blog_example2.html</guid>
-      <source url="https://note.luoqiu.site/rss.xml">博客文章样例 2</source>
-      <description>博客文章内容，支持 Markdown 和 HTML 语言。</description>
-      <category>工具</category>
-      <pubDate>Sat, 02 Mar 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
+      <title>curl使用说明</title>
+      <link>https://note.luoqiu.site/posts/2024-09-27-blog_linuxcurl.html</link>
+      <guid>https://note.luoqiu.site/posts/2024-09-27-blog_linuxcurl.html</guid>
+      <source url="https://note.luoqiu.site/rss.xml">curl使用说明</source>
+      <description>curl使用说明 参考地址 遇到使用场景后续在补充 配置请求的cookie 配置请求头的参数 发送post请求 发送带请求体的POST请求 下载文件 显示详细的请求��息 跟随重定向 设置超时时间 上传文件</description>
+      <category>curl</category>
+      <pubDate>Fri, 27 Sep 2024 17:20:49 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p><a href="https://catonmat.net/cookbooks/curl" target="_blank" rel="noopener noreferrer">参考地址</a></p>
+<blockquote>
+<p>遇到使用场景后续在补充</p>
+</blockquote>
+<h2>配置请求的cookie</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> http://localhost:9600/getuser</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --cookie</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "USER_TOKEN=xxxxxxxxxxxxxxxxxx"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>配置请求头的参数</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> http://localhost:9600/getuser</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -H</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "X-Request-Id:12"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>发送post请求</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -X</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> POST</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> http://localhost:9600/putuser</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -H</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "X-Request-Id:12"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>发送带请求体的POST请求</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 发送JSON数据</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -X</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> POST</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -H</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "Content-Type: application/json"</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -d</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> '{"name":"张三","age":18}'</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> http://localhost:9600/user</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 发送表单数据</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -X</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> POST</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -d</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "name=张三&amp;age=18"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> http://localhost:9600/user</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>下载文件</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 下载并保存为原文件名</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -O</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> https://example.com/file.zip</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 下载并指定保存的文件名</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -o</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> myfile.zip</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> https://example.com/file.zip</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>显示详细的请求��息</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># -v 参数可以显示请求的详细信息,包括请求头、响应头等</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -v</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> http://localhost:9600/getuser</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># -i 参数可以显示响应头信息</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -i</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> http://localhost:9600/getuser</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>跟随重定向</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># -L 参数可以跟随30x重定向</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -L</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> http://localhost:9600/redirect</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h2>设置超时时间</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 设置连接超时时间为5秒</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --connect-timeout</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 5</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> http://localhost:9600/getuser</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h2>上传文件</h2>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 上传单个文件</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -F</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "file=@/path/to/local/file.txt"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> http://localhost:9600/upload</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 上传多个文件</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">curl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -F</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "file1=@/path/to/file1.txt"</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -F</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "file2=@/path/to/file2.txt"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> http://localhost:9600/upload</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Windows Server 安装MySQL8.0.39</title>
+      <link>https://note.luoqiu.site/posts/2024-09-29-blog_win_mysql.html</link>
+      <guid>https://note.luoqiu.site/posts/2024-09-29-blog_win_mysql.html</guid>
+      <source url="https://note.luoqiu.site/rss.xml">Windows Server 安装MySQL8.0.39</source>
+      <description>Windows Server 安装 MySQL 8.0 详细指南 准备工作 下载 MySQL 8.0 zip 压缩包 选择安装目录，如 C:\data\mysql 安装步骤 1. 解压安装包 2. 初始化数据目录 3. 安装 MySQL 服务 4. 启动 MySQL 服务 MySQL 配置文件 (my.ini) 5. 设置 root 密码 6. 配置远...</description>
+      <category>MySQL</category>
+      <pubDate>Sun, 30 Nov 2025 04:12:19 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>准备工作</h2>
+<ol>
+<li>下载 MySQL 8.0 zip 压缩包</li>
+<li>选择安装目录，如 <code>C:\data\mysql</code></li>
+</ol>
+<h2>安装步骤</h2>
+<h3>1. 解压安装包</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 将下载的 mysql-8.0.39-winx64.zip 解压到指定目录</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 例如：C:\data\mysql</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>2. 初始化数据目录</h3>
+<div class="language-cmd line-numbers-mode" data-highlighter="shiki" data-ext="cmd" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-cmd"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">cd C:\</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">\</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">mysql</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">\</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">bin</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">mysqld</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> --</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">initialize</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">insecure</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>3. 安装 MySQL 服务</h3>
+<div class="language-cmd line-numbers-mode" data-highlighter="shiki" data-ext="cmd" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-cmd"><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">mysqld</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> --</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">install</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> MySQL80</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> --</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">defaults</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">file</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">C</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:\</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">\</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">mysql</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">\my.ini</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h3>4. 启动 MySQL 服务</h3>
+<div class="language-cmd line-numbers-mode" data-highlighter="shiki" data-ext="cmd" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-cmd"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">net start MySQL80</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>MySQL 配置文件 (my.ini)</h2>
+<div class="language-ini line-numbers-mode" data-highlighter="shiki" data-ext="ini" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-ini"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[mysqld]</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 打开binlog</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">log-bin</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">mysql-bin</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 选择ROW(行)模式</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">binlog-format</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">ROW</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 配置MySQL replaction需要定义，不要和canal的slaveId重复</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">server_id</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">1</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 设置3306端口</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">port</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">3306</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 设置mysql的安装目录</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">basedir</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"C:\data\mysql"</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 设置mysql数据库的数据的存放目录</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">datadir</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"C:\data\mysql\data"</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 允许最大连接数</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">max_connections</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">5000</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 允许连接失败的次数。</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">max_connect_errors</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">100</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 服务端使用的字符集默认为utf8mb4</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">character-set-server</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">utf8mb4</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 创建新表时将使用的默认存储引擎</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">default-storage-engine</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">INNODB</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 默认使用"mysql_native_password"插件认证</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">default_authentication_plugin</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">mysql_native_password</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 忽略大小写</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">lower_case_table_names</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> 1</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 添加以下优化配置</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">innodb_buffer_pool_size</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">2G  </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 根据服务器内存大小调整，建议设为总内存的50%-70%</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">innodb_log_file_size</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">256M</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">innodb_log_buffer_size</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">16M</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">innodb_flush_log_at_trx_commit</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">1</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">innodb_lock_wait_timeout</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">50</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 临时表大小</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">tmp_table_size</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">64M</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">max_heap_table_size</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">64M</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 日志配置</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">log_error</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">C:\data\mysql\data\mysql-error.log</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">slow_query_log</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">1</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">slow_query_log_file</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">C:\data\mysql\data\mysql-slow.log</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">long_query_time</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">2</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[mysql]</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 设置mysql客户端默认字符集</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">default-character-set</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">utf8mb4</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[client]</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 设置mysql客户端连接服务端时默认使用的端口</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">port</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">3306</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">default-character-set</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">utf8mb4</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>5. 设置 root 密码</h3>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-sql"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">-- 登录MySQL</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">mysql -u </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">root</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">-- 设置root密码</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">ALTER</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> USER</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 'root'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">@</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'localhost'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> IDENTIFIED </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">BY</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 'YourStrongPassword'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>6. 配置远程访问</h3>
+<div class="language-sql line-numbers-mode" data-highlighter="shiki" data-ext="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-sql"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">-- 更新 root 用户的 host 为 %</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">UPDATE</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> mysql</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">user</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> SET</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> host</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'%'</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> WHERE</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> user</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'root'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">-- 刷新权限</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">FLUSH PRIVILEGES;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>安全建议</h2>
+<ol>
+<li>使用复杂的强密码</li>
+<li>配置防火墙</li>
+<li>限制 root 用户权限</li>
+<li>考虑创建专门的远程访问用户</li>
+</ol>
+<h2>常见问题排查</h2>
+<ul>
+<li>检查服务是否正常运行：<code>net start MySQL80</code></li>
+<li>查看错误日志：<code>C:\data\mysql\data\mysql-error.log</code></li>
+<li>检查端口是否被占用：<code>netstat -ano | findstr :3306</code></li>
+</ul>
+<h2>性能优化提示</h2>
+<ul>
+<li>根据服务器实际内存调整 <code>innodb_buffer_pool_size</code></li>
+<li>定期检查慢查询日志</li>
+<li>配置合理的备份策略</li>
+</ul>
+<h2>结语</h2>
+<p>安装 MySQL 需要谨慎，特别注意安全配置和权限管理。根据实际业务需求调整配置，确保数据库的性能和安全。</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>博客文章样例</title>
-      <link>https://note.luoqiu.site/posts/2024-03-01-blog_example.html</link>
-      <guid>https://note.luoqiu.site/posts/2024-03-01-blog_example.html</guid>
-      <source url="https://note.luoqiu.site/rss.xml">博客文章样例</source>
-      <description>博客文章内容，支持 Markdown 和 HTML 语言。</description>
-      <category>使用指南</category>
-      <pubDate>Fri, 01 Mar 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
+      <title>Redis 最大打开文件数</title>
+      <link>https://note.luoqiu.site/posts/2024-10-10-blog_redis.html</link>
+      <guid>https://note.luoqiu.site/posts/2024-10-10-blog_redis.html</guid>
+      <source url="https://note.luoqiu.site/rss.xml">Redis 最大打开文件数</source>
+      <description>Redis 最大打开文件数 在运行高并发Redis服务时,我们可能会遇到&amp;quot;max number of clients reached&amp;quot;的错误。这通常是因为系统对可打开文件数的限制太低导致的。本文将指导您如何提高Redis服务器的最大打开文件数(Max open files)限制。 问题诊断 首先,让我们查看当前的系统限制和Redis进程的限制: 检查系...</description>
+      <category>Redis</category>
+      <pubDate>Sun, 30 Nov 2025 04:12:19 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>在运行高并发Redis服务时,我们可能会遇到"max number of clients reached"的错误。这通常是因为系统对可打开文件数的限制太低导致的。本文将指导您如何提高Redis服务器的最大打开文件数(Max open files)限制。</p>
+<h2>问题诊断</h2>
+<p>首先,让我们查看当前的系统限制和Redis进程的限制:</p>
+<ol>
+<li>检查系统级别的限制:</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /etc/security/limits.conf</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> | </span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">grep</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 'nofile\|nproc'</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>输出可能类似于:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>* soft nofile 65536</span></span>
+<span class="line"><span>* hard nofile 65536</span></span>
+<span class="line"><span>* soft nproc 65565</span></span>
+<span class="line"><span>* hard nproc 65565</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>检查Redis进程的实际限制:</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">pidof</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> redis-server</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /proc/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">pi</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">d&gt;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/limits</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>其中<code>&lt;pid&gt;</code>是Redis服务器的进程ID。输出可能显示:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>Max open files            10240                10240                files</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>如果这个值明显小于系统限制,那么我们需要进行一些调整。</p>
+<h2>解决步骤</h2>
+<h3>1. 修改系统级别的限制</h3>
+<p>如果系统级别的限制不够高,首先在<code>/etc/security/limits.conf</code>文件中设置更高的限制:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>* soft nofile 65536</span></span>
+<span class="line"><span>* hard nofile 65536</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>2. 为Redis进程特别设置限制</h3>
+<p>假设Redis由用户"redis"运行,在<code>/etc/security/limits.conf</code>文件中添加:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>redis soft nofile 65536</span></span>
+<span class="line"><span>redis hard nofile 65536</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>如果Redis以root用户运行,则改为:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>root soft nofile 65536</span></span>
+<span class="line"><span>root hard nofile 65536</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>3. 修改Redis配置文件</h3>
+<p>在Redis的配置文件(通常是<code>/etc/redis/redis.conf</code>或<code>/etc/redis.conf</code>)中,添加或修改:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>maxclients 65000</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h3>4. 修改systemd服务文件</h3>
+<p>如果Redis是通过systemd管理的,编辑<code>/etc/systemd/system/redis.service</code>文件(如果不存在,可能在<code>/lib/systemd/system/redis.service</code>),添加:</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>[Service]</span></span>
+<span class="line"><span>LimitNOFILE=65536</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>5. 重新加载systemd并重启Redis</h3>
+<p>执行以下命令:</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> daemon-reload</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> restart</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> redis</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>6. 验证更改</h3>
+<p>重启Redis后,再次检查限制:</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">pidof</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> redis-server</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /proc/</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">pi</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">d&gt;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/limits</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h2>注意事项</h2>
+<ul>
+<li>如果上述步骤执行后仍然没有效果,可能需要检查SELinux或其他安全机制是否在限制Redis的文件描述符使用。</li>
+<li>某些云平台或容器环境可能有额外的限制机制,需要单独配置。</li>
+<li>确保设置的限制值不会对系统整体性能造成负面影响。</li>
+</ul>
+<p>通过以上步骤,您应该能够成功提高Redis服务器的最大打开文件数限制,从而支持更多的并发连接。</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>CentOS7 OpenSSH和OpenSSL升级</title>
+      <link>https://note.luoqiu.site/posts/2024-10-17-blog_openssh_l.html</link>
+      <guid>https://note.luoqiu.site/posts/2024-10-17-blog_openssh_l.html</guid>
+      <source url="https://note.luoqiu.site/rss.xml">CentOS7 OpenSSH和OpenSSL升级</source>
+      <description>CCentOS7 OpenSSH和OpenSSL升级 在处理服务器安全问题时，及时升级关键组件的版本是非常重要的。本文将详细介绍如何在CentOS 7系统上升级OpenSSH和OpenSSL到最新稳定版本，以解决已知的安全漏洞。 环境说明 当前系统版本 当前组件版本 现存安全漏洞 当前版本存在以下安全漏洞： OpenSSH 安全漏洞(CVE-2023-...</description>
+      <category>CentOS</category>
+      <category>安全</category>
+      <pubDate>Sun, 30 Nov 2025 04:12:19 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>在处理服务器安全问题时，及时升级关键组件的版本是非常重要的。本文将详细介绍如何在CentOS 7系统上升级OpenSSH和OpenSSL到最新稳定版本，以解决已知的安全漏洞。</p>
+<h2>环境说明</h2>
+<h3>当前系统版本</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">[root@tamkems-yy ~]# cat /etc/redhat-release </span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">CentOS</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Linux</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> release</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 7.8.2003</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (Core)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>当前组件版本</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">[root@tamkems-yy ~]# ssh -V</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">OpenSSH_7.4p1,</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> OpenSSL</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 1.0.2k-fips</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  26</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Jan</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 2017</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">[root@tamkems-yy ~]# openssl version</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">OpenSSL</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 1.0.2k-fips</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  26</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> Jan</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 2017</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>现存安全漏洞</h2>
+<p>当前版本存在以下安全漏洞：</p>
+<ul>
+<li>OpenSSH 安全漏洞(CVE-2023-51767)</li>
+<li>OpenSSH 安全漏洞(CVE-2023-38408)</li>
+<li>OpenSSH 命令注入漏洞(CVE-2020-15778)</li>
+<li>OpenSSH 欺骗安全漏洞(CVE-2019-6110)</li>
+<li>OpenSSH信息泄露漏洞(CVE-2020-14145)</li>
+<li>OpenSSH 用户枚举漏洞(CVE-2018-15919)</li>
+<li>OpenSSH 安全漏洞(CVE-2023-48795)</li>
+<li>OpenSSH CBC模式信息泄露漏洞(CVE-2008-5161)</li>
+<li>等多个安全漏洞...</li>
+</ul>
+<h2>升级目标版本</h2>
+<ul>
+<li>OpenSSH: 9.6p1</li>
+<li>OpenSSL: 1.1.1w</li>
+</ul>
+<h2>升级准备工作</h2>
+<p>在开始升级之前，需要做好以下准备：</p>
+<ol>
+<li>系统备份</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 创建备份目录</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mkdir</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -p</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /root/ssh_backup_</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">$(</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">date</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> +%Y%m%d</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 备份当前配置</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">cp</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -r</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /etc/ssh/</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">*</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /root/ssh_backup_</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">$(</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">date</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> +%Y%m%d</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">cp</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /etc/sysconfig/sshd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /root/ssh_backup_</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">$(</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">date</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> +%Y%m%d</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>安装必要的编译工具</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 安装开发工具组</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> groupinstall</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -y</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "Development Tools"</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 安装依赖包</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">yum</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -y</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> zlib-devel</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> openssl-devel</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> perl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> perl-devel</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> pam-devel</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>OpenSSL升级步骤</h2>
+<h3>1. 下载和解压</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">cd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /usr/local/src</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">wget</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> https://www.openssl.org/source/openssl-1.1.1w.tar.gz</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">tar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -zxf</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> openssl-1.1.1w.tar.gz</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">cd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> openssl-1.1.1w</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>2. 编译安装</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 配置</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">./config</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --prefix=/usr/local/openssl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> shared</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> zlib</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 编译和测试</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">make</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">make</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> test</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 安装</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">make</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>3. 配置环境</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 配置动态链接库</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "/usr/local/openssl/lib"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &gt; </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/etc/ld.so.conf.d/openssl.conf</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ldconfig</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 替换原有的OpenSSL</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mv</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /usr/bin/openssl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /usr/bin/openssl.old</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ln</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -s</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /usr/local/openssl/bin/openssl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /usr/bin/openssl</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>OpenSSH升级步骤</h2>
+<h3>1. 下载和解压</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">cd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /usr/local/src</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">wget</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.6p1.tar.gz</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">tar</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -zxf</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> openssh-9.6p1.tar.gz</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">cd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> openssh-9.6p1</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>2. 编译安装</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 配置</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">./configure</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">    --prefix=/usr</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">    --sysconfdir=/etc/ssh</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">    --with-ssl-dir=/usr/local/openssl</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">    --with-zlib</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">    --with-pam</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">    --with-md5-passwords</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">    --with-tcp-wrappers</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 编译和安装</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">make</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">make</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>3. 创建systemd服务配置</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 创建 systemd 服务文件</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &gt; </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/usr/lib/systemd/system/sshd.service</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &lt;&lt; </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">'EOF'</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">[Unit]</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">Description=OpenSSH server daemon</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">Documentation=man:sshd(8) man:sshd_config(5)</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">After=network.target</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">[Service]</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">Type=exec</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">ExecStart=/usr/sbin/sshd -D -e</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">ExecReload=/bin/kill -HUP $MAINPID</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">KillMode=process</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">Restart=on-failure</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">RestartSec=3s</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">[Install]</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">WantedBy=multi-user.target</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">EOF</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>4. 更新SSH配置文件</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 创建新的 sshd_config 配置文件</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">cat</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &gt; </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/etc/ssh/sshd_config</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &lt;&lt; </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">'EOF'</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"># 基本配置</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">Port 22</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">AddressFamily any</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">ListenAddress 0.0.0.0</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">ListenAddress ::</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"># 协议版本</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">Protocol 2</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"># 主机密钥</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">HostKey /etc/ssh/ssh_host_rsa_key</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">HostKey /etc/ssh/ssh_host_ecdsa_key</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">HostKey /etc/ssh/ssh_host_ed25519_key</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"># 日志级别</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">SyslogFacility AUTHPRIV</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">LogLevel INFO</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"># 认证配置</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">PermitRootLogin yes</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">PubkeyAuthentication yes</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">AuthorizedKeysFile .ssh/authorized_keys</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">PasswordAuthentication yes</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">PermitEmptyPasswords no</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">ChallengeResponseAuthentication no</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"># 其他设置</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">X11Forwarding yes</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">PrintMotd no</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">UsePAM yes</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">UseDNS no</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">Subsystem sftp /usr/libexec/openssh/sftp-server</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">EOF</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>5. 设置正确的文件权限</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 设置关键文件权限</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 755</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /usr/sbin/sshd</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 755</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /etc/ssh</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 644</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /etc/ssh/sshd_config</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 600</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /etc/ssh/ssh_host_</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">*</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">_key</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">chmod</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 644</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /etc/ssh/ssh_host_</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">*</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">_key.pub</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>6. 重启服务</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 重新加载 systemd 配置</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> daemon-reload</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 重启 sshd 服务</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> restart</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> sshd</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 检查服务状态</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> status</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> sshd</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>7. 验证升级</h3>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 检查 SSH 版本</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ssh</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -V</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 尝试本地连接测试</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ssh</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -v</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> localhost</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>故障排查指南</h2>
+<p>如果升级后遇到问题，可以按以下步骤排查：</p>
+<ol>
+<li>检查日志文件</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">tail</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -f</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/log/secure</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">tail</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -f</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /var/log/messages</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>检查防火墙设置</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">firewall-cmd</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --list-services</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> | </span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">grep</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ssh</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><ol start="3">
+<li>如需回滚，执行以下操作：
+<ul>
+<li>停止sshd服务</li>
+<li>从备份目录恢复配置文件</li>
+<li>重启服务</li>
+</ul>
+</li>
+</ol>
+<h2>安全建议</h2>
+<p>完成升级后，建议采取以下安全措施：</p>
+<ol>
+<li>
+<p>加强SSH配置</p>
+<ul>
+<li>禁用不安全的加密算法</li>
+<li>限制root用户登录</li>
+<li>设置登录失败次数限制</li>
+<li>配置密钥认证</li>
+</ul>
+</li>
+<li>
+<p>定期维护</p>
+<ul>
+<li>检查系统日志</li>
+<li>监控失败的登录尝试</li>
+<li>定期检查服务状态</li>
+</ul>
+</li>
+</ol>
+<h2>总结</h2>
+<p>通过以上步骤，我们已经成功将OpenSSH和OpenSSL升级到了最新的稳定版本，解决了多个安全漏洞。建议在执行升级操作前，先在测试环境中进行验证，确保升级过程不会影响到生产环境的正常运行。</p>
+<h2>参考文档</h2>
+<ul>
+<li>OpenSSH官方文档: https://www.openssh.com/</li>
+<li>OpenSSL官方文档: https://www.openssl.org/</li>
+<li>CentOS 7官方文档: https://wiki.centos.org/</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Excel VBA 自动填充空白并合并相同值</title>
+      <link>https://note.luoqiu.site/posts/2024-10-23-blog_excel01.html</link>
+      <guid>https://note.luoqiu.site/posts/2024-10-23-blog_excel01.html</guid>
+      <source url="https://note.luoqiu.site/rss.xml">Excel VBA 自动填充空白并合并相同值</source>
+      <description>Excel VBA 自动填充空白并合并相同值 问题背景 在Excel中经常会遇到这样的数据处理需求：一列数据中存在多个空白单元格，需要用其上方最近的非空值填充，然后将相同的连续值合并成一个单元格。比如： 需要将其转换为三个合并的单元格，每个单元格分别包含1、2、3。 合并前 Alt text 合并后 Alt text 解决方案 我们可以通过VBA宏来自...</description>
+      <category>Excel</category>
+      <pubDate>Sun, 30 Nov 2025 04:12:19 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>问题背景</h2>
+<p>在Excel中经常会遇到这样的数据处理需求：一列数据中存在多个空白单元格，需要用其上方最近的非空值填充，然后将相同的连续值合并成一个单元格。比如：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>1</span></span>
+<span class="line"><span>[空白]</span></span>
+<span class="line"><span>[空白]</span></span>
+<span class="line"><span>2</span></span>
+<span class="line"><span>[空白]</span></span>
+<span class="line"><span>[空白]</span></span>
+<span class="line"><span>3</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>需要将其转换为三个合并的单元格，每个单元格分别包含1、2、3。</p>
+<p>合并前
+<img src="/img/excel-1.png" alt="Alt text" loading="lazy"></p>
+<p>合并后
+<img src="/img/excel-2.png" alt="Alt text" loading="lazy"></p>
+<h2>解决方案</h2>
+<p>我们可以通过VBA宏来自动化这个过程。下面是完整的解决方案：</p>
+<h3>1. VBA代码实现</h3>
+<div class="language-vba line-numbers-mode" data-highlighter="shiki" data-ext="vba" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-vba"><span class="line"><span>Sub FillAndMergeCells()</span></span>
+<span class="line"><span>    Dim ws As Worksheet</span></span>
+<span class="line"><span>    Dim rng As Range</span></span>
+<span class="line"><span>    Dim cell As Range</span></span>
+<span class="line"><span>    Dim startCell As Range</span></span>
+<span class="line"><span>    Dim lastRow As Long</span></span>
+<span class="line"><span>    Dim currentValue As Variant</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    'Set the active worksheet</span></span>
+<span class="line"><span>    Set ws = ActiveSheet</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    '获取最后一行</span></span>
+<span class="line"><span>    lastRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    '设置要处理的范围</span></span>
+<span class="line"><span>    Set rng = ws.Range("A1:A" &amp; lastRow)</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    '先填充空白单元格</span></span>
+<span class="line"><span>    For Each cell In rng</span></span>
+<span class="line"><span>        If IsEmpty(cell) Then</span></span>
+<span class="line"><span>            cell.Value = cell.End(xlUp).Value</span></span>
+<span class="line"><span>        End If</span></span>
+<span class="line"><span>    Next cell</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    '开始合并相同值的单元格</span></span>
+<span class="line"><span>    Set startCell = rng.Cells(1)</span></span>
+<span class="line"><span>    currentValue = startCell.Value</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    Application.ScreenUpdating = False</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    For Each cell In rng</span></span>
+<span class="line"><span>        If cell.Row &gt; 1 Then</span></span>
+<span class="line"><span>            If cell.Value &lt;&gt; currentValue Then</span></span>
+<span class="line"><span>                '如果值不同，合并之前的区域</span></span>
+<span class="line"><span>                If startCell.Row &lt;&gt; cell.Row - 1 Then</span></span>
+<span class="line"><span>                    Range(startCell, ws.Cells(cell.Row - 1, startCell.Column)).Merge</span></span>
+<span class="line"><span>                End If</span></span>
+<span class="line"><span>                Set startCell = cell</span></span>
+<span class="line"><span>                currentValue = cell.Value</span></span>
+<span class="line"><span>            ElseIf cell.Row = lastRow Then</span></span>
+<span class="line"><span>                '如果是最后一行且值相同，合并到最后</span></span>
+<span class="line"><span>                Range(startCell, cell).Merge</span></span>
+<span class="line"><span>            End If</span></span>
+<span class="line"><span>        End If</span></span>
+<span class="line"><span>    Next cell</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    '设置合并后的格式</span></span>
+<span class="line"><span>    With rng</span></span>
+<span class="line"><span>        .HorizontalAlignment = xlCenter</span></span>
+<span class="line"><span>        .VerticalAlignment = xlCenter</span></span>
+<span class="line"><span>    End With</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    Application.ScreenUpdating = True</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    MsgBox "合并完成！", vbInformation</span></span>
+<span class="line"><span>End Sub</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Sub AddMacroButton()</span></span>
+<span class="line"><span>    '添加一个按钮来运行宏</span></span>
+<span class="line"><span>    Dim btn As Button</span></span>
+<span class="line"><span>    Set btn = ActiveSheet.Buttons.Add(100, 10, 120, 30)</span></span>
+<span class="line"><span>    With btn</span></span>
+<span class="line"><span>        .OnAction = "FillAndMergeCells"</span></span>
+<span class="line"><span>        .Caption = "合并相同值"</span></span>
+<span class="line"><span>    End With</span></span>
+<span class="line"><span>End Sub</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>2. 代码说明</h3>
+<p>代码主要分为以下几个部分：</p>
+<ol>
+<li>
+<p><strong>初始化设置</strong></p>
+<ul>
+<li>声明必要的变量</li>
+<li>获取工作表最后一行</li>
+<li>设置处理范围</li>
+</ul>
+</li>
+<li>
+<p><strong>填充空白单元格</strong></p>
+<ul>
+<li>遍历所有单元格</li>
+<li>如果遇到空白单元格，使用上方最近的非空值填充</li>
+</ul>
+</li>
+<li>
+<p><strong>合并相同值</strong></p>
+<ul>
+<li>遍历填充后的单元格</li>
+<li>记录开始单元格和当前值</li>
+<li>当遇到不同值时，合并之前的区域</li>
+<li>特殊处理最后一行的情况</li>
+</ul>
+</li>
+<li>
+<p><strong>格式设置</strong></p>
+<ul>
+<li>设置合并后的单元格对齐方式</li>
+<li>添加完成提示</li>
+</ul>
+</li>
+</ol>
+<h3>3. 使用方法</h3>
+<ol>
+<li>
+<p><strong>添加代码到Excel</strong></p>
+<ul>
+<li>按 <code>Alt + F11</code> 打开VBA编辑器</li>
+<li>在左侧项目浏览器中双击要添加宏的工作表</li>
+<li>将代码复制到代码窗口中</li>
+</ul>
+</li>
+<li>
+<p><strong>运行宏</strong>
+方法一：通过VBA菜单</p>
+<ul>
+<li>按 <code>Alt + F8</code> 打开宏对话框</li>
+<li>选择 "FillAndMergeCells"</li>
+<li>点击 "运行"</li>
+</ul>
+<p>方法二：添加按钮（推荐）</p>
+<ul>
+<li>运行 "AddMacroButton" 宏添加按钮</li>
+<li>之后只需点击按钮即可运行</li>
+</ul>
+</li>
+</ol>
+<h3>4. 注意事项</h3>
+<ol>
+<li>
+<p><strong>数据备份</strong></p>
+<ul>
+<li>使用前建议备份原始数据</li>
+<li>可以使用 <code>Ctrl + Z</code> 撤销操作</li>
+</ul>
+</li>
+<li>
+<p><strong>使用限制</strong></p>
+<ul>
+<li>默认处理A列数据</li>
+<li>如需处理其他列，需修改代码中的范围设置</li>
+</ul>
+</li>
+<li>
+<p><strong>性能优化</strong></p>
+<ul>
+<li>代码中使用了 <code>ScreenUpdating = False</code> 提高运行速度</li>
+<li>对于大量数据，处理时间可能较长</li>
+</ul>
+</li>
+</ol>
+<h2>扩展优化</h2>
+<p>可以根据具体需求对代码进行以下优化：</p>
+<ol>
+<li>添加列选择功能</li>
+<li>添加进度条显示</li>
+<li>增加错误处理机制</li>
+<li>添加自定义格式设置选项</li>
+</ol>
+<h2>总结</h2>
+<p>这个VBA解决方案提供了一个自动化的方法来处理Excel中的空白填充和相同值合并需求。它不仅节省了手动操作的时间，还确保了处理的准确性。对于经常需要处理类似数据的用户来说，这是一个很有价值的工具。</p>
+]]></content:encoded>
+      <enclosure url="https://note.luoqiu.site/img/excel-1.png" type="image/png"/>
     </item>
   </channel>
 </rss>
