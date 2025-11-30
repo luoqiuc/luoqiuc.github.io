@@ -5,10 +5,10 @@ import sidebar from "./sidebar.js";
 export default hopeTheme(
   {
     // 主题选项：https://theme-hope.vuejs.press/zh/config/theme/layout.html
-    hostname: "https://newzone.top",
+    hostname: "https://note.luoqiu.site",
     author: {
       name: "LearnData",
-      url: "https://newzone.top",
+      url: "https://note.luoqiu.site",
     },
 
     favicon: "/favicon.ico",
@@ -40,7 +40,7 @@ export default hopeTheme(
     fullscreen: true,
 
     // 默认为 GitHub. 同时也可以是一个完整的 URL
-    repo: "rockbenben/LearnData",
+    repo: "luoqiu/luoqiuc.github.io",
     // 自定义仓库链接文字。默认从 `repo` 中自动推断为 "GitHub" / "GitLab" / "Gitee" / "Bitbucket" 其中之一，或是 "Source"。
     repoLabel: "GitHub",
     // 是否在导航栏内显示仓库链接，默认为 `true`
@@ -70,17 +70,17 @@ export default hopeTheme(
     // 主题功能选项：https://theme-hope.vuejs.press/zh/config/theme/feature.html
     blog: {
       articleInfo: ["Date", "PageView", "Category", "Tag", "ReadingTime"],
-      name: "清顺",
+      name: "洛秋",
       avatar: "/avatar_self.webp",
-      description: "迷信新工具，热衷于研究开源软件、心理学理论，定期分享探索成果",
+      description: "会的不多，多的不会",
       intro: "/intro.html",
       medias: {
-        GitHub: "https://github.com/rockbenben",
-        Zhihu: "https://www.zhihu.com/people/qingwhat",
-        少数派: { icon: "https://newzone.top/icons/sspai.svg", link: "https://sspai.com/u/zqj05i4v/posts" },
-        Wechat: "https://img.newzone.top/wechat.svg",
-        Email: "mailto:learndata@newzone.top",
-        Discord: "https://discord.gg/PZTQfJ4GjX",
+        GitHub: "https://github.com/luoqiuc",
+        Zhihu: "https://www.zhihu.com/people/su-po-leng",
+        少数派: { icon: "https://newzone.top/icons/sspai.svg", link: "https://sspai.com/u/2ie4gu7z/posts" },
+        // Wechat: "https://img.newzone.top/wechat.svg",
+        Email: "mailto:luoqiu@foxmail.com",
+        // Discord: "https://discord.gg/PZTQfJ4GjX",
         RSS: "/rss.xml",
       },
     },
@@ -194,20 +194,20 @@ export default hopeTheme(
     },
     // https://theme-hope.vuejs.press/zh/guide/feature/encrypt.html
     // 加密配置样例（不需要可删除）注意，受到 VuePress 的限制，在未解密前，文章内容仅仅被隐藏，访问者仍可以从源码中获取文章的内容。
-    encrypt: {
-      config: {
-        // 这会加密整个 encrypt 目录，并且两个密码都是可用的
-        "/encrypt/": {
-          password: ["1234", "5678"],
-          hint: "从 xxx 获取密码",
-        },
-        // 这只会加密 /apps/encrypt03.html 页面
-        "/apps/encrypt03.html": {
-          password: "1234",
-          hint: "从 xxx 获取密码",
-        },
-      },
-    },
+    // encrypt: {
+    //   config: {
+    //     // 这会加密整个 encrypt 目录，并且两个密码都是可用的
+    //     "/encrypt/": {
+    //       password: ["luoqiuc"],
+    //       hint: "从 xxx 获取密码",
+    //     },
+    //     // 这只会加密 /apps/encrypt03.html 页面
+    //     "/apps/encrypt03.html": {
+    //       password: "luoqiuc",
+    //       hint: "从 xxx 获取密码",
+    //     },
+    //   },
+    // },
 
     // 开发模式下是否启动热更新，显示所有更改并重新渲染
     hotReload: true,
