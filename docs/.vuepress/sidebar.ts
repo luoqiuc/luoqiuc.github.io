@@ -17,7 +17,7 @@ export default sidebar({
       children: [
         "Applist.md",
         "toolbox.md",
-        "encrypt03.md",
+        // "encrypt03.md",
         {
           text: "其他",
           icon: "fa6-solid:code-compare",
@@ -78,21 +78,21 @@ export default sidebar({
       collapsible: true,
       children: "structure",
     },
-    {
-      text: "加密目录",
-      icon: "material-symbols:encrypted",
-      prefix: "encrypt/",
-      collapsible: true,
-      children: "structure",
-    },
-    {
-      text: "博客文章",
-      icon: "fa6-solid:feather-pointed",
-      prefix: "_posts/",
-      link: "/blog",
-      collapsible: true,
-      children: "structure",
-    },
+    // {
+    //   text: "加密目录",
+    //   icon: "material-symbols:encrypted",
+    //   prefix: "encrypt/",
+    //   collapsible: true,
+    //   children: "structure",
+    // },
+    // {
+    //   text: "博客文章",
+    //   icon: "fa6-solid:feather-pointed",
+    //   prefix: "_posts/",
+    //   link: "/blog",
+    //   collapsible: true,
+    //   children: "structure",
+    // },
   ],
   // 专题区（独立侧边栏）
   "/apps/topic/": "structure",
