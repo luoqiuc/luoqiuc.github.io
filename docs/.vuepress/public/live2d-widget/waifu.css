@@ -24,7 +24,8 @@
 
 #waifu {
 	bottom: -1000px;
-	right: 0; /*left: 0; 修改后可将看板娘放在最左侧 */
+	left: 0; /* 将看板娘放在最左侧 */
+	/* right: 0; 将看板娘放在最右侧 */
 	line-height: 0;
 	margin-bottom: -10px;
 	position: fixed;
